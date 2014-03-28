@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+ <html xmlns="http://www.w3.org/1999/html">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	
+<script  src="templates/ajax.js" language="JavaScript" type="text/javascript">
+    var  filetype;
+    var SelectedFeature ;
+    var FileCount ;
+    var checkrandom;
+    var flag;
+    var datetime;
+     function Write(url, content)	// url is the script and data is a string of parameters
+        {
+         var sbmt = document.getElementById("btnsbt");
+            var xhr = createXHR();
+             xhr.onreadystatechange=function()
+            {
+             if (xhr.readyState==4 && xhr.status==200)
+             {
+             sbmt.disabled = false;
+             var storing = document.getElementById("storage");
+             storing.innerHTML = "<p>Click here to download Files<b><a href='#' id='getdownload' onClick='DownloadFile()'>"+SelectedFeature+"_"+datetime+"</a></b>.";
+             document.getElementById("img").innerHTML="";
+             document.getElementById("subtn").innerHTML="";
+             document.getElementById("image").src = "";
+
+             flag="false";
+             }
+            else
+             {
+              if(flag=="true")
+               {
+                 sbmt.disabled = true;
+                 document.getElementById("img").innerHTML="Processing The Files...";
+                document.getElementById("image").src = "1.gif";
+
+                }
+            }
+           }
+          //alert(url+content);
+           xhr.open("GET", url+content, true);
+          xhr.send();
+        }
+
+
+        function DownloadFile()
+      {
+
+       var hrefpath="Final/Zip/" + SelectedFeature+"_"+datetime+".zip";
+        getdownload.href =hrefpath;
+        var filepath= SelectedFeature+"_"+datetime+".zip";
+         getdownload.download =filepath;
+
+      }
+        function isNumberKey(evt)
+           {
+              var charCode = (evt.which) ? evt.which : event.keyCode;
+              if (charCode != 46 && charCode > 31
+                && (charCode < 48 || charCode > 57))
+                 return false;
+
+              return true;
+           }
+    function submitForm()
+     {
+        var currentdate = new Date();
+         datetime = "" + currentdate.getDate() + ""+ (currentdate.getMonth()+1)+ ""+ currentdate.getFullYear() + ""+ currentdate.getHours() +""+ currentdate.getMinutes() + "" + currentdate.getSeconds();
+        //alert(datetime);
+         flag="true";
+        var queryString="";
+        filetype = document.getElementById('comb1').value;
+        SelectedFeature = document.getElementById('comb2').value;
+        FileCount = document.getElementById('filecnt').value;
+        checkrandom = document.getElementsByName('random');
+        //Validation For All Tools
+        if (filetype=="0")
+        {
+            alert("Please Select FileType");
+            return false;
+        }
+        if (SelectedFeature=="-select-")
+        {
+            alert("Please Select Feature");
+            return false;
+        }
+
+            if (FileCount<=0)
+            {
+            alert("File Count should not be zero and Blank... ");
+            return false;
+            }
+        for (var i = 0, length = checkrandom.length; i < length; i++) {
+            if (checkrandom[0].checked)
+            {
+                   queryString = "?c1=" + filetype+"&c2=" + SelectedFeature + "&c3=" +FileCount+"&c4=random"+"&c5="+datetime;
+             }
+             if(checkrandom[1].checked)
+            {
+              queryString = "?c1=" + filetype+"&c2=" + SelectedFeature + "&c3=" +FileCount+"&c4=default"+"&c5="+datetime;
+            }
+         }
+        Write("callperl.php", queryString);
+     }
+	  var arr = new Array();
+        arr[0] = new Array("-select-");
+        arr[1] = new Array("-select-","Paragraphs","Sentences","Words","Characters","Sections","Fields","Fields_IncludePicture","Fields_Sequence","Fields_Embed","Fields_Formula","Fields_TOCEntry",
+                            "Fields_DocInfo","Fields_UserInfo","Endnotes","Footnotes","FormFields","Bookmarks","Headers","Footers","Comments","CustomXmlParts","Hyperlinks","Lists","Shapes",
+                            "Shapes_Picture","Shapes_AutoShape","Shapes_Line","Shapes_TextBox","Shapes_Group","Shapes_Callout","Shapes_Diagram","Shapes_TextEffect","InlineShapes","InlineShapes_Picture","InlineShapes_LinkedPicture","InlineShapes_EmbeddedOLEObject","InlineShapes_HorizontalLine","InlineShapes_PictureBullet","Styles","Tables","TOC","Indexes");
+        arr[2] = new Array("-select-","Paragraphs","Sentences","Words","Characters","Sections","Fields","Fields_IncludePicture","Fields_Sequence","Fields_Embed","Fields_Formula","Fields_TOCEntry",
+                            "Fields_DocInfo","Fields_UserInfo","Endnotes","Footnotes","FormFields","Bookmarks","Headers","Footers","Comments","CustomXmlParts","Hyperlinks","Lists","Shapes",
+                            "Shapes_Picture","Shapes_AutoShape","Shapes_Line","Shapes_TextBox","Shapes_Group","Shapes_Callout","Shapes_Diagram","Shapes_ShapeTypeMixed","Shapes_TextEffect",
+                            "Shapes_SmartArt","InlineShapes","InlineShapes_Picture","InlineShapes_LinkedPicture","InlineShapes_EmbeddedOLEObject","InlineShapes_Chart","InlineShapes_HorizontalLine",
+                            "InlineShapes_SmartArt","InlineShapes_PictureBullet","Styles","Tables","TOC","Indexes");
+
+        arr[3] = new Array("-select-","SmartArt","Charts","SortedFields","Comments","Filters","Images_Png_Gif","Shapes","Styles","Embedded_Objects","Sheet_Table","Hyperlink","Images_EMF_WMF","MergeCells",
+                           "Pivot_Table","Protected_Sheet","Forms_Fields","ActiveX","FrozenPanes","Conditional_Formatting","WrapText","Format_Cell_Fill_Pattern_Style","Format_Cell_Fill_Background_Colour",
+                           "Text_Horizontal_Left_Align","Text_Horizontal_Right_Align","Text_Horizontal_Centre_Align","Text_Vertical_Top_Align","Text_Vertical_Bottom_Align","Text_Vertical_Centre_Align",
+                           "Formula","PercentageFormat","NumberFormat","CurrencyFormat","DateFormat");
+        arr[4] = new Array("-select-","SmartArt","Charts","SortedFields","Comments","Filters","Images_Png_Gif","Shapes","Styles","Embedded_Objects","Sheet_Table","Hyperlink","Images_EMF_WMF","MergeCells",
+                           "Pivot_Table","Protected_Sheet","Forms_Fields","ActiveX","FrozenPanes","Conditional_Formatting","WrapText","Format_Cell_Fill_Pattern_Style","Format_Cell_Fill_Background_Colour",
+                           "Text_Horizontal_Left_Align","Text_Horizontal_Right_Align","Text_Horizontal_Centre_Align","Text_Vertical_Top_Align","Text_Vertical_Bottom_Align","Text_Vertical_Centre_Align",
+                           "Formula","PercentageFormat","NumberFormat","CurrencyFormat","DateFormat","file_2007","file_2010","file_2013","Other_office");
+
+        arr[5] = new Array("-select-","Animations","Embedded_Objects","Embedded_Objects_Charts","Headers_Footers","Hyperlinks","Images_EMF_WMF","Images_PNG_GIF_JPG",
+                          "Shapes","Shapes_3D_Effects","Shapes_Fills","Shapes_Freeform","Shapes_Other_Effects","Slide_Backgrounds","SmartArt","Speaker_Notes","Tables","Text_Box","Themes","Transitions",
+                          "Lists_Numeric","Fonts","Lists_Character","Lists_Picture");
+        arr[6] = new Array("-select-","Animations","Comments","Embedded_Objects","Embedded_Objects_Charts","Headers_Footers","Hyperlinks","Images_EMF_WMF","Images_PNG_GIF_JPG",
+                          "Shapes","Shapes_3D_Effects","Shapes_Fills","Shapes_Freeform","Shapes_Other_Effects","Slide_Backgrounds","SmartArt","Speaker_Notes","Tables","Text_Box","Themes","Transitions","Lists_Numeric","Fonts","Lists_Character","Lists_Picture");
+        function change(combo1)
+        {
+            var comboValue=combo1.value;
+            document.forms["ajax"].elements["combo2"].options.length=0;
+        for (var i=0;i<arr[comboValue].length;i++)
+            {
+
+             var option = document.createElement("option");
+             option.innerHTML = arr[comboValue][i];
+             document.forms["ajax"].elements["combo2"].appendChild(option);
+            }
+        }
+
+    </script>
+
+      <title>Bootstrap Page Layout - Sample Demo</title>
+      </head>
+    <body>
+    <form name="ajax"  method="post" enctype="multipart/form-data">
+    <h3 > Feature Extraction Tool</h3>
+    <table border="1" style="width:25%;" align="center" >
+        <tr>
+            <th  style="width:20%;">Criteria </th>
+            <th  style="width:20%;">Values</th>
+        </tr>
+        <tr>
+            <th  style="width:20%;">File Type:</th>
+            <td><select name="combo1" id="comb1" onchange="change(this);">
+                <option value="0">-Select-</option>
+                <option value="1">doc</option>
+                <option value="2">docx</option>
+                <option value="3">xls</option>
+                <option value="4">xlsx</option>
+                <option value="5">ppt</option>
+                <option value="6">pptx</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th style="width:20%;">Feature:</th>
+            <td><select name="combo2" id="comb2"></select>
+            </td>
+        </tr>
+        <tr>
+            <th rowspan="2" style="width:20%;">Random Selection:</th>
+            <td><input type="radio" name="random"id="On" value="1" >ON
+        </tr>
+        <tr>
+            <td><input type="radio" name="random" id="Off"value="0" checked >OFF </td>
+        </tr>
+        <tr>
+            <th  style="width:20%;">File Count:</th>
+            <td><input type="text" id="filecnt" name="fileCount" onkeypress="return isNumberKey(event)"maxlength="4" > </td>
+        </tr>
+        <tr>
+            <th colspan="2"><INPUT type="button" name="subtn" id="btnsbt" value="Submit"  ONCLICK="submitForm()" ></th>
+        </tr>
+    </table>
+    <br>
+       <h3 align="left">C2C Automation Tool</h3>
+       <p>
+      
+    <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+      </div>
+    <div class="control-group">
+
+                  <label class="checkbox"> Select Master Build
+                    <input type="checkbox" id="optionsCheckbox" value="option1">
+                  </label>
+    </div>
+            <input type= "button" class="btn btn-sucess"  value="submit" onclick="location.reload();location.href='runFET?id1=1'" >RUN FET TOOL</input>
+                <p>
+           <input type= "button" class="btn btn-sucess"  value="RUN Pyton script" onclick="location.reload();location.href='runpythonscript?num_instances=1'" >Run PYTHON Script</input>
+            </p>
+
+    {% if cmd %}
+        {{ cmd }}
+
+     {% endif %}
+
+
+    {% if command %}
+
+       {{ command }}
+
+
+        <p> Running python script baby....wait...</p>
+
+     {% endif %}
+    <div class="control-group">
+                <label class="control-label" for="optionsCheckbox">Download</label>
+            </div>
+                 
+    </div>
+
+          {% csrf_token %}
+          <p>{{ form.non_field_errors }}</p>
+          <p>{{ form.docfile.label_tag }} {{ form.docfile.help_text }}</p>
+          <p>
+            {{ form.docfile.errors }}
+            {{ form.docfile }}
+          </p>
+                <p><input type="submit" class="btn" value="Upload" /></p>
+
+    </form>
+    </body>
+    </html>

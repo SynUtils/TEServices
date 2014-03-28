@@ -1,0 +1,39 @@
+@{
+    if (IsPost) {
+        var fileData = Request.Files[0];
+        var fileName = Path.GetFileName(fileData.FileName);
+        var fileSavePath = Server.MapPath("~/upload/" + fileName);
+        fileData.SaveAs(fileSavePath);
+    }
+}
+ 
+<!DOCTYPE html>
+ 
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Uploadify Demo</title>
+        <link href="/Styles/uploadify.css" rel="stylesheet" type="text/css" media="screen" />
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript" src="uploadify/jquery.uploadify.min.js"></script>
+    </head>
+    <body>
+        <div id="demo">
+            <h2>Uploadify Demo</h2>
+        
+            <script type="text/javascript">
+                $(function() {
+                   $('#file_upload').uploadify({
+                        'swf'      : '/uploadify/uploadify.swf',
+                        'uploader' : '/'
+                    });
+                });
+            </script>
+            <div class="demo-box">
+                <div id="status-message">Select some files to upload:</div>
+                <div id="queue"></div>
+                <input id="file_upload" type="file" name="Filedata" />
+            </div>
+        </div>
+    </body>
+</html>
