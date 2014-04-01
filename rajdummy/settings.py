@@ -138,8 +138,6 @@ INSTALLED_APPS = (
     # 'django.contrib.admindocs',
 
     'dummy',
-    'widget_tweaks'
-
 )
 
 # A sample logging configuration. The only tangible logging
