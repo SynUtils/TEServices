@@ -60,7 +60,7 @@ USE_TZ = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/media/"
-MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'media')
+MEDIA_ROOT = os.path.join(PROJECT_ROOT, '/var/www/media')
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
@@ -118,7 +118,7 @@ ROOT_URLCONF = 'TEServices.urls'
 WSGI_APPLICATION = 'TEServices.wsgi.application'
 
 TEMPLATE_DIRS = (
-    'templates',
+    '/home/synerzip/Documents/TEServices/templates',
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
