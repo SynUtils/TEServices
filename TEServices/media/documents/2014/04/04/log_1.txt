@@ -1,0 +1,1705 @@
+[==========] Running 241 tests from 39 test cases.
+[----------] Global test environment set-up.
+[----------] 1 test from add_table_2007_tests
+[ RUN      ] add_table_2007_tests.new_table_success
+E0913 09:00:02.851701 18046 dcp_generation_error.cc:16] error: DCPGenerationError, encountered while building the DCP : Error: de Error Message: could not generate DCP Missing Parameters:  eid cgr elm 
+[32mjson verified[0m
+checking child: 20
+checking child: 19
+checking child: 20
+checking child: 19
+[       OK ] add_table_2007_tests.new_table_success (80 ms)
+[----------] 1 test from add_table_2007_tests (80 ms total)
+
+[----------] 1 test from bulleted_lists_2003_tests
+[ RUN      ] bulleted_lists_2003_tests.simple_bulleted_lists_success
+E0913 09:00:02.927937 18046 file_system.cc:368] could not find directory entry for: /Data
+E0913 09:00:02.928061 18046 properties_iterator.cc:59] cannot read op. value: unexpected end of buffer
+E0913 09:00:02.928077 18046 section_properties_parser.cc:41] could not get next sprm
+[32mjson verified[0m
+[       OK ] bulleted_lists_2003_tests.simple_bulleted_lists_success (79 ms)
+[----------] 1 test from bulleted_lists_2003_tests (79 ms total)
+
+[----------] 1 test from bulleted_lists_2007_tests
+[ RUN      ] bulleted_lists_2007_tests.simple_bulleted_lists_success
+E0913 09:00:03.007529 18046 builder_selector.cc:54] io error: could not open file: ../../../../test-files/integ-test/word/files/bulleted_lists_2007/bulleted_lists_2007.simple_bulleted_list_success.doc
+E0913 09:00:03.007551 18046 open_document_request_handler.cc:167] could not find an appropriate builder for: ../../../../test-files/integ-test/word/files/bulleted_lists_2007/bulleted_lists_2007.simple_bulleted_list_success.doc
+E0913 09:00:03.007562 18046 open_document_request_handler.cc:116] result: 22
+[32mjson verified[0m
+[       OK ] bulleted_lists_2007_tests.simple_bulleted_lists_success (78 ms)
+[----------] 1 test from bulleted_lists_2007_tests (78 ms total)
+
+[----------] 5 tests from invalid_dcp_request_tests
+[ RUN      ] invalid_dcp_request_tests.invalid_request_name
+E0913 09:00:03.085383 18046 request_handler_factory.cc:30] error: cannot find an appropiate handler for request: 
+E0913 09:00:03.085408 18046 command_not_supported_error.cc:16] error: CommandNotSupportedError : error: cns Error Message: command not supported Invalid JSON data 
+[32mjson verified[0m
+[       OK ] invalid_dcp_request_tests.invalid_request_name (75 ms)
+[ RUN      ] invalid_dcp_request_tests.missing_request_name
+E0913 09:00:03.160419 18046 missing_parameter_error.cc:16] error: MissingParameterError : error: mp Error Message: missing paramters Missing parameter list: name 
+[32mjson verified[0m
+[       OK ] invalid_dcp_request_tests.missing_request_name (75 ms)
+[ RUN      ] invalid_dcp_request_tests.invalid_request_id
+[32mjson verified[0m
+[       OK ] invalid_dcp_request_tests.invalid_request_id (78 ms)
+[ RUN      ] invalid_dcp_request_tests.missing_request_id
+[32mjson verified[0m
+[       OK ] invalid_dcp_request_tests.missing_request_id (78 ms)
+[ RUN      ] invalid_dcp_request_tests.missing_request_node_id_
+[32mjson verified[0m
+[       OK ] invalid_dcp_request_tests.missing_request_node_id_ (78 ms)
+[----------] 5 tests from invalid_dcp_request_tests (384 ms total)
+
+[----------] 7 tests from basic_text_formatting_2003_tests
+[ RUN      ] basic_text_formatting_2003_tests.gdc_different_font_sizes_request_success
+E0913 09:00:03.470423 18046 file_system.cc:368] could not find directory entry for: /Data
+E0913 09:00:03.470554 18046 properties_iterator.cc:59] cannot read op. value: unexpected end of buffer
+E0913 09:00:03.470571 18046 section_properties_parser.cc:41] could not get next sprm
+E0913 09:00:03.470623 18046 record_factory.cc:62] unsupported record type: 61726
+E0913 09:00:03.470645 18046 record_container.cc:51] DggContainer: unsupported record type: 61726
+E0913 09:00:03.470655 18046 record_container.cc:53] DggContainer: creating a unsupported record instead
+E0913 09:00:03.470671 18046 record_factory.cc:62] unsupported record type: 61448
+E0913 09:00:03.470682 18046 record_container.cc:51] DgContainer: unsupported record type: 61448
+E0913 09:00:03.470698 18046 record_container.cc:53] DgContainer: creating a unsupported record instead
+E0913 09:00:03.470713 18046 record_factory.cc:62] unsupported record type: 61449
+E0913 09:00:03.470723 18046 record_container.cc:51] SpContainer: unsupported record type: 61449
+E0913 09:00:03.470734 18046 record_container.cc:53] SpContainer: creating a unsupported record instead
+E0913 09:00:03.470782 18046 record_factory.cc:62] unsupported record type: 61457
+E0913 09:00:03.470795 18046 record_container.cc:51] SpContainer: unsupported record type: 61457
+E0913 09:00:03.470805 18046 record_container.cc:53] SpContainer: creating a unsupported record instead
+[32mjson verified[0m
+[       OK ] basic_text_formatting_2003_tests.gdc_different_font_sizes_request_success (81 ms)
+[ RUN      ] basic_text_formatting_2003_tests.gdc_different_font_types_request_success
+E0913 09:00:03.550822 18046 file_system.cc:368] could not find directory entry for: /Data
+E0913 09:00:03.550930 18046 properties_iterator.cc:59] cannot read op. value: unexpected end of buffer
+E0913 09:00:03.550946 18046 section_properties_parser.cc:41] could not get next sprm
+E0913 09:00:03.550997 18046 record_factory.cc:62] unsupported record type: 61726
+E0913 09:00:03.551012 18046 record_container.cc:51] DggContainer: unsupported record type: 61726
+E0913 09:00:03.551022 18046 record_container.cc:53] DggContainer: creating a unsupported record instead
+E0913 09:00:03.551034 18046 record_factory.cc:62] unsupported record type: 61448
+E0913 09:00:03.551044 18046 record_container.cc:51] DgContainer: unsupported record type: 61448
+E0913 09:00:03.551054 18046 record_container.cc:53] DgContainer: creating a unsupported record instead
+E0913 09:00:03.551321 18046 record_factory.cc:62] unsupported record type: 61449
+E0913 09:00:03.551992 18046 record_container.cc:51] SpContainer: unsupported record type: 61449
+E0913 09:00:03.552677 18046 record_container.cc:53] SpContainer: creating a unsupported record instead
+E0913 09:00:03.553280 18046 record_factory.cc:62] unsupported record type: 61457
+E0913 09:00:03.554069 18046 record_container.cc:51] SpContainer: unsupported record type: 61457
+E0913 09:00:03.554900 18046 record_container.cc:53] SpContainer: creating a unsupported record instead
+[32mjson verified[0m
+[       OK ] basic_text_formatting_2003_tests.gdc_different_font_types_request_success (86 ms)
+[ RUN      ] basic_text_formatting_2003_tests.gdc_different_font_color_request_success
+E0913 09:00:03.637032 18046 file_system.cc:368] could not find directory entry for: /Data
+E0913 09:00:03.637473 18046 properties_iterator.cc:59] cannot read op. value: unexpected end of buffer
+E0913 09:00:03.638581 18046 section_properties_parser.cc:41] could not get next sprm
+[32mjson verified[0m
+[       OK ] basic_text_formatting_2003_tests.gdc_different_font_color_request_success (84 ms)
+[ RUN      ] basic_text_formatting_2003_tests.gdc_different_paragraph_spacing_before_after_request_success
+E0913 09:00:03.721235 18046 file_system.cc:368] could not find directory entry for: /Data
+E0913 09:00:03.721662 18046 properties_iterator.cc:59] cannot read op. value: unexpected end of buffer
+E0913 09:00:03.722465 18046 section_properties_parser.cc:41] could not get next sprm
+[32mjson verified[0m
+[       OK ] basic_text_formatting_2003_tests.gdc_different_paragraph_spacing_before_after_request_success (83 ms)
+[ RUN      ] basic_text_formatting_2003_tests.gdc_different_paragraph_first_line_indentation_request_success
+E0913 09:00:03.804533 18046 file_system.cc:368] could not find directory entry for: /Data
+E0913 09:00:03.805047 18046 properties_iterator.cc:59] cannot read op. value: unexpected end of buffer
+E0913 09:00:03.805685 18046 section_properties_parser.cc:41] could not get next sprm
+cannot load: ../../../../test-files/integ-test/word/json/different_paragraph_first_line_indentation_2003_success.response.json
+src/dcp/integ-test/framework/validate_dcp_response.cc:42: Failure
+Value of: valid_response
+  Actual: false
+Expected: true
+[  FAILED  ] basic_text_formatting_2003_tests.gdc_different_paragraph_first_line_indentation_request_success (91 ms)
+[ RUN      ] basic_text_formatting_2003_tests.gdc_different_paragraph_hanging_indentation_request_success
+E0913 09:00:03.895392 18046 file_system.cc:368] could not find directory entry for: /Data
+E0913 09:00:03.895845 18046 properties_iterator.cc:59] cannot read op. value: unexpected end of buffer
+E0913 09:00:03.896471 18046 section_properties_parser.cc:41] could not get next sprm
+cannot load: ../../../../test-files/integ-test/word/json/different_paragraph_hanging_indentation_2003_success.response.json
+src/dcp/integ-test/framework/validate_dcp_response.cc:42: Failure
+Value of: valid_response
+  Actual: false
+Expected: true
+[  FAILED  ] basic_text_formatting_2003_tests.gdc_different_paragraph_hanging_indentation_request_success (82 ms)
+[ RUN      ] basic_text_formatting_2003_tests.gdc_different_paragraph_left_right_indentation_request_success
+E0913 09:00:03.977257 18046 file_system.cc:368] could not find directory entry for: /Data
+E0913 09:00:03.977713 18046 properties_iterator.cc:59] cannot read op. value: unexpected end of buffer
+E0913 09:00:03.978593 18046 section_properties_parser.cc:41] could not get next sprm
+cannot load: ../../../../test-files/integ-test/word/json/different_paragraph_left_right_indentation_2003_success.response.json
+src/dcp/integ-test/framework/validate_dcp_response.cc:42: Failure
+Value of: valid_response
+  Actual: false
+Expected: true
+[  FAILED  ] basic_text_formatting_2003_tests.gdc_different_paragraph_left_right_indentation_request_success (84 ms)
+[----------] 7 tests from basic_text_formatting_2003_tests (591 ms total)
+
+[----------] 5 tests from breaks_2003_tests
+[ RUN      ] breaks_2003_tests.column_break_success
+E0913 09:00:04.060711 18046 file_system.cc:368] could not find directory entry for: /Data
+E0913 09:00:04.061156 18046 properties_iterator.cc:59] cannot read op. value: unexpected end of buffer
+E0913 09:00:04.061934 18046 section_properties_parser.cc:41] could not get next sprm
+E0913 09:00:04.062572 18046 record_factory.cc:62] unsupported record type: 61726
+E0913 09:00:04.063348 18046 record_container.cc:51] DggContainer: unsupported record type: 61726
+E0913 09:00:04.064062 18046 record_container.cc:53] DggContainer: creating a unsupported record instead
+E0913 09:00:04.064872 18046 record_factory.cc:62] unsupported record type: 61448
+E0913 09:00:04.065460 18046 record_container.cc:51] DgContainer: unsupported record type: 61448
+E0913 09:00:04.066159 18046 record_container.cc:53] DgContainer: creating a unsupported record instead
+E0913 09:00:04.066751 18046 record_factory.cc:62] unsupported record type: 61449
+E0913 09:00:04.067376 18046 record_container.cc:51] SpContainer: unsupported record type: 61449
+E0913 09:00:04.068181 18046 record_container.cc:53] SpContainer: creating a unsupported record instead
+E0913 09:00:04.068816 18046 record_factory.cc:62] unsupported record type: 61457
+E0913 09:00:04.069437 18046 record_container.cc:51] SpContainer: unsupported record type: 61457
+E0913 09:00:04.070430 18046 record_container.cc:53] SpContainer: creating a unsupported record instead
+[32mjson verified[0m
+[       OK ] breaks_2003_tests.column_break_success (89 ms)
+[ RUN      ] breaks_2003_tests.line_break_success
+E0913 09:00:04.149652 18046 file_system.cc:368] could not find directory entry for: /Data
+E0913 09:00:04.150116 18046 properties_iterator.cc:59] cannot read op. value: unexpected end of buffer
+E0913 09:00:04.150650 18046 section_properties_parser.cc:41] could not get next sprm
+cannot load: ../../../../test-files/integ-test/word/json/breaks_2003_tests/breaks_2003_tests.line_break_success.response.json
+src/dcp/integ-test/framework/validate_dcp_response.cc:42: Failure
+Value of: valid_response
+  Actual: false
+Expected: true
+[  FAILED  ] breaks_2003_tests.line_break_success (80 ms)
+[ RUN      ] breaks_2003_tests.multiple_line_breaks_single_paragraph_success
+E0913 09:00:04.230113 18046 file_system.cc:368] could not find directory entry for: /Data
+E0913 09:00:04.230531 18046 properties_iterator.cc:59] cannot read op. value: unexpected end of buffer
+E0913 09:00:04.231174 18046 section_properties_parser.cc:41] could not get next sprm
+E0913 09:00:04.231734 18046 record_factory.cc:62] unsupported record type: 61726
+E0913 09:00:04.232377 18046 record_container.cc:51] DggContainer: unsupported record type: 61726
+E0913 09:00:04.232928 18046 record_container.cc:53] DggContainer: creating a unsupported record instead
+E0913 09:00:04.233716 18046 record_factory.cc:62] unsupported record type: 61448
+E0913 09:00:04.234354 18046 record_container.cc:51] DgContainer: unsupported record type: 61448
+E0913 09:00:04.235641 18046 record_container.cc:53] DgContainer: creating a unsupported record instead
+E0913 09:00:04.236496 18046 record_factory.cc:62] unsupported record type: 61449
+E0913 09:00:04.237161 18046 record_container.cc:51] SpContainer: unsupported record type: 61449
+E0913 09:00:04.237833 18046 record_container.cc:53] SpContainer: creating a unsupported record instead
+E0913 09:00:04.238494 18046 record_factory.cc:62] unsupported record type: 61457
+E0913 09:00:04.239071 18046 record_container.cc:51] SpContainer: unsupported record type: 61457
+E0913 09:00:04.239759 18046 record_container.cc:53] SpContainer: creating a unsupported record instead
+[32mjson verified[0m
+[       OK ] breaks_2003_tests.multiple_line_breaks_single_paragraph_success (92 ms)
+[ RUN      ] breaks_2003_tests.page_break_success
+E0913 09:00:04.321645 18046 file_system.cc:368] could not find directory entry for: /Data
+E0913 09:00:04.322029 18046 properties_iterator.cc:59] cannot read op. value: unexpected end of buffer
+E0913 09:00:04.322901 18046 section_properties_parser.cc:41] could not get next sprm
+E0913 09:00:04.323745 18046 record_factory.cc:62] unsupported record type: 61726
+E0913 09:00:04.324424 18046 record_container.cc:51] DggContainer: unsupported record type: 61726
+E0913 09:00:04.325031 18046 record_container.cc:53] DggContainer: creating a unsupported record instead
+E0913 09:00:04.325774 18046 record_factory.cc:62] unsupported record type: 61448
+E0913 09:00:04.326371 18046 record_container.cc:51] DgContainer: unsupported record type: 61448
+E0913 09:00:04.327031 18046 record_container.cc:53] DgContainer: creating a unsupported record instead
+E0913 09:00:04.327760 18046 record_factory.cc:62] unsupported record type: 61449
+E0913 09:00:04.328454 18046 record_container.cc:51] SpContainer: unsupported record type: 61449
+E0913 09:00:04.329077 18046 record_container.cc:53] SpContainer: creating a unsupported record instead
+E0913 09:00:04.329922 18046 record_factory.cc:62] unsupported record type: 61457
+E0913 09:00:04.330591 18046 record_container.cc:51] SpContainer: unsupported record type: 61457
+E0913 09:00:04.331270 18046 record_container.cc:53] SpContainer: creating a unsupported record instead
+[32mjson verified[0m
+[       OK ] breaks_2003_tests.page_break_success (89 ms)
+[ RUN      ] breaks_2003_tests.section_break_success
+E0913 09:00:04.411384 18046 file_system.cc:368] could not find directory entry for: /Data
+E0913 09:00:04.411876 18046 properties_iterator.cc:59] cannot read op. value: unexpected end of buffer
+E0913 09:00:04.412431 18046 section_properties_parser.cc:41] could not get next sprm
+E0913 09:00:04.413038 18046 properties_iterator.cc:59] cannot read op. value: unexpected end of buffer
+E0913 09:00:04.413629 18046 section_properties_parser.cc:41] could not get next sprm
+E0913 09:00:04.414355 18046 properties_iterator.cc:59] cannot read op. value: unexpected end of buffer
+E0913 09:00:04.414849 18046 section_properties_parser.cc:41] could not get next sprm
+E0913 09:00:04.415475 18046 properties_iterator.cc:59] cannot read op. value: unexpected end of buffer
+E0913 09:00:04.416170 18046 section_properties_parser.cc:41] could not get next sprm
+E0913 09:00:04.416712 18046 stsh.cc:43] could not load LPStd at index: 21
+E0913 09:00:04.417181 18046 file.cc:376] could not load Stsh
+E0913 09:00:04.418450 18046 record_factory.cc:62] unsupported record type: 61726
+E0913 09:00:04.418728 18046 record_container.cc:51] DggContainer: unsupported record type: 61726
+E0913 09:00:04.419428 18046 record_container.cc:53] DggContainer: creating a unsupported record instead
+E0913 09:00:04.419975 18046 record_factory.cc:62] unsupported record type: 61448
+E0913 09:00:04.420477 18046 record_container.cc:51] DgContainer: unsupported record type: 61448
+E0913 09:00:04.421108 18046 record_container.cc:53] DgContainer: creating a unsupported record instead
+E0913 09:00:04.421649 18046 record_factory.cc:62] unsupported record type: 61449
+E0913 09:00:04.422174 18046 record_container.cc:51] SpContainer: unsupported record type: 61449
+E0913 09:00:04.422683 18046 record_container.cc:53] SpContainer: creating a unsupported record instead
+E0913 09:00:04.423496 18046 record_factory.cc:62] unsupported record type: 61448
+E0913 09:00:04.424036 18046 record_container.cc:51] DgContainer: unsupported record type: 61448
+E0913 09:00:04.424509 18046 record_container.cc:53] DgContainer: creating a unsupported record instead
+E0913 09:00:04.425051 18046 record_factory.cc:62] unsupported record type: 61449
+E0913 09:00:04.426996 18046 record_container.cc:51] SpContainer: unsupported record type: 61449
+E0913 09:00:04.427516 18046 record_container.cc:53] SpContainer: creating a unsupported record instead
+E0913 09:00:04.428589 18046 record_factory.cc:62] unsupported record type: 61457
+E0913 09:00:04.429541 18046 record_container.cc:51] SpContainer: unsupported record type: 61457
+E0913 09:00:04.430133 18046 record_container.cc:53] SpContainer: creating a unsupported record instead
+[32mjson verified[0m
+[       OK ] breaks_2003_tests.section_break_success (102 ms)
+[----------] 5 tests from breaks_2003_tests (452 ms total)
+
+[----------] 4 tests from breaks_2007_tests
+[ RUN      ] breaks_2007_tests.column_break_success
+[32mjson verified[0m
+[       OK ] breaks_2007_tests.column_break_success (80 ms)
+[ RUN      ] breaks_2007_tests.line_break_success
+cannot load: ../../../../test-files/integ-test/word/json/breaks_2007_tests/breaks_2007_tests.line_break_success.response.json
+checking child: 24
+checking child: 23
+src/dcp/integ-test/framework/validate_dcp_response.cc:42: Failure
+Value of: valid_response
+  Actual: false
+Expected: true
+[  FAILED  ] breaks_2007_tests.line_break_success (79 ms)
+[ RUN      ] breaks_2007_tests.multiple_line_breaks_single_paragraph_success
+[32mjson verified[0m
+[       OK ] breaks_2007_tests.multiple_line_breaks_single_paragraph_success (81 ms)
+[ RUN      ] breaks_2007_tests.page_break_success
+[32mjson verified[0m
+checking child: 30
+checking child: 29
+checking child: 28
+[       OK ] breaks_2007_tests.page_break_success (80 ms)
+[----------] 4 tests from breaks_2007_tests (321 ms total)
+
+[----------] 2 tests from character_run_formatting_2007_tests
+[ RUN      ] character_run_formatting_2007_tests.all_examples_success
+cannot load: ../../../../test-files/integ-test/word/json/character_run_formatting_2007_tests/character_run_formatting_2007_tests.all_examples_success.response.json
+src/dcp/integ-test/framework/validate_dcp_response.cc:42: Failure
+Value of: valid_response
+  Actual: false
+Expected: true
+[  FAILED  ] character_run_formatting_2007_tests.all_examples_success (87 ms)
+[ RUN      ] character_run_formatting_2007_tests.negative_override_success
+[32mjson verified[0m
+checking child: 27
+checking child: 26
+[       OK ] character_run_formatting_2007_tests.negative_override_success (80 ms)
+[----------] 2 tests from character_run_formatting_2007_tests (167 ms total)
+
+[----------] 7 tests from delete_node_2007_tests
+[ RUN      ] delete_node_2007_tests.delete_first_node_success
+E0913 09:00:05.004232 18046 delete_node.cc:65] Node with id 19 is not an image
+[32mjson verified[0m
+checking child: 24
+checking child: 23
+checking child: 24
+checking child: 23
+[       OK ] delete_node_2007_tests.delete_first_node_success (80 ms)
+[ RUN      ] delete_node_2007_tests.delete_middle_node_success
+E0913 09:00:05.084475 18046 delete_node.cc:65] Node with id 21 is not an image
+[32mjson verified[0m
+checking child: 24
+checking child: 23
+checking child: 24
+checking child: 23
+[       OK ] delete_node_2007_tests.delete_middle_node_success (81 ms)
+[ RUN      ] delete_node_2007_tests.delete_last_node_success
+E0913 09:00:05.165644 18046 delete_node.cc:65] Node with id 23 is not an image
+[32mjson verified[0m
+checking child: 24
+checking child: 23
+checking child: 24
+checking child: 22
+[       OK ] delete_node_2007_tests.delete_last_node_success (82 ms)
+[ RUN      ] delete_node_2007_tests.delete_image_node_success
+[32mjson verified[0m
+checking child: 26
+checking child: 24
+checking child: 26
+[       OK ] delete_node_2007_tests.delete_image_node_success (86 ms)
+[ RUN      ] delete_node_2007_tests.delete_node_invalid_node
+E0913 09:00:05.332329 18046 delete_node.cc:58] Node with id 718 not found
+E0913 09:00:05.332633 18046 delete_node.cc:39] error when checking for resource removal
+E0913 09:00:05.333209 18046 transaction_manager.cc:69] TransactionManager: Unable to apply command
+E0913 09:00:05.333777 18046 unable_to_edit_error.cc:16] error: UnableToEditError : Error: ued Error Message: unable to edit  Unable to delete node with given node id
+[32mjson verified[0m
+[       OK ] delete_node_2007_tests.delete_node_invalid_node (82 ms)
+[ RUN      ] delete_node_2007_tests.delete_node_invalid_node_id
+E0913 09:00:05.414460 18046 invalid_parameter_error.cc:16] error: InvalidParameterError : Error: ivp Error Message: invalid parameter  Invalid parameter: node_id_str
+[32mjson verified[0m
+[       OK ] delete_node_2007_tests.delete_node_invalid_node_id (80 ms)
+[ RUN      ] delete_node_2007_tests.delete_node_invalid_node_id_length
+E0913 09:00:05.495004 18046 invalid_parameter_error.cc:16] error: InvalidParameterError : Error: ivp Error Message: invalid parameter  Invalid parameter: node_id_str
+[32mjson verified[0m
+[       OK ] delete_node_2007_tests.delete_node_invalid_node_id_length (79 ms)
+[----------] 7 tests from delete_node_2007_tests (571 ms total)
+
+[----------] 5 tests from delete_text_2007_tests
+[ RUN      ] delete_text_2007_tests.delete_text_at_start_success
+[32mjson verified[0m
+checking child: 24
+checking child: 23
+checking child: 22
+checking child: 24
+checking child: 23
+checking child: 22
+[       OK ] delete_text_2007_tests.delete_text_at_start_success (80 ms)
+[ RUN      ] delete_text_2007_tests.delete_text_at_middle_success
+[32mjson verified[0m
+checking child: 24
+checking child: 23
+checking child: 22
+checking child: 24
+checking child: 23
+checking child: 22
+[       OK ] delete_text_2007_tests.delete_text_at_middle_success (85 ms)
+[ RUN      ] delete_text_2007_tests.delete_text_at_end_success
+[32mjson verified[0m
+checking child: 24
+checking child: 23
+checking child: 22
+checking child: 24
+checking child: 23
+checking child: 22
+[       OK ] delete_text_2007_tests.delete_text_at_end_success (81 ms)
+[ RUN      ] delete_text_2007_tests.delete_text_invalid_offset
+E0913 09:00:05.820930 18046 delete_text.cc:43] DeleteText: node not found 6
+E0913 09:00:05.821322 18046 command_base.cc:25] CommandBase: Apply failure
+E0913 09:00:05.821936 18046 transaction_manager.cc:69] TransactionManager: Unable to apply command
+E0913 09:00:05.822675 18046 unable_to_edit_error.cc:16] error: UnableToEditError : Error: ued Error Message: unable to edit  Unable to delete text
+[32mjson verified[0m
+[       OK ] delete_text_2007_tests.delete_text_invalid_offset (82 ms)
+[ RUN      ] delete_text_2007_tests.delete_text_invalid_length
+E0913 09:00:05.903177 18046 delete_text.cc:43] DeleteText: node not found 6
+E0913 09:00:05.903522 18046 command_base.cc:25] CommandBase: Apply failure
+E0913 09:00:05.904237 18046 transaction_manager.cc:69] TransactionManager: Unable to apply command
+E0913 09:00:05.904932 18046 unable_to_edit_error.cc:16] error: UnableToEditError : Error: ued Error Message: unable to edit  Unable to delete text
+[32mjson verified[0m
+[       OK ] delete_text_2007_tests.delete_text_invalid_length (82 ms)
+[----------] 5 tests from delete_text_2007_tests (410 ms total)
+
+[----------] 4 tests from open_document_2007_tests
+[ RUN      ] open_document_2007_tests.open_document_request_success
+[32mjson verified[0m
+[       OK ] open_document_2007_tests.open_document_request_success (79 ms)
+[ RUN      ] open_document_2007_tests.open_2003_document_request_success
+E0913 09:00:06.061334 18046 file_system.cc:368] could not find directory entry for: /Data
+E0913 09:00:06.061787 18046 properties_iterator.cc:59] cannot read op. value: unexpected end of buffer
+E0913 09:00:06.062325 18046 section_properties_parser.cc:41] could not get next sprm
+E0913 09:00:06.062881 18046 record_factory.cc:62] unsupported record type: 61726
+E0913 09:00:06.063858 18046 record_container.cc:51] DggContainer: unsupported record type: 61726
+E0913 09:00:06.064456 18046 record_container.cc:53] DggContainer: creating a unsupported record instead
+E0913 09:00:06.065122 18046 record_factory.cc:62] unsupported record type: 61448
+E0913 09:00:06.067178 18046 record_container.cc:51] DgContainer: unsupported record type: 61448
+E0913 09:00:06.067800 18046 record_container.cc:53] DgContainer: creating a unsupported record instead
+E0913 09:00:06.068410 18046 record_factory.cc:62] unsupported record type: 61449
+E0913 09:00:06.068991 18046 record_container.cc:51] SpContainer: unsupported record type: 61449
+E0913 09:00:06.069613 18046 record_container.cc:53] SpContainer: creating a unsupported record instead
+E0913 09:00:06.070356 18046 record_factory.cc:62] unsupported record type: 61457
+E0913 09:00:06.071041 18046 record_container.cc:51] SpContainer: unsupported record type: 61457
+E0913 09:00:06.071630 18046 record_container.cc:53] SpContainer: creating a unsupported record instead
+[32mjson verified[0m
+[       OK ] open_document_2007_tests.open_2003_document_request_success (89 ms)
+[ RUN      ] open_document_2007_tests.open_document_request_failure
+E0913 09:00:06.149416 18046 builder_selector.cc:54] io error: could not open file: ../../../../test-files/integ-test/word/files/open_document_2007_tests.open_document_request_failure.docx
+E0913 09:00:06.149950 18046 open_document_request_handler.cc:167] could not find an appropriate builder for: ../../../../test-files/integ-test/word/files/open_document_2007_tests.open_document_request_failure.docx
+E0913 09:00:06.150406 18046 open_document_request_handler.cc:116] result: 22
+[32mjson verified[0m
+[       OK ] open_document_2007_tests.open_document_request_failure (79 ms)
+[ RUN      ] open_document_2007_tests.open_document_xml_special_characters_success
+E0913 09:00:06.299813 18046 drawing_processenator.cc:120] cannot create image: invalid drawing information
+[32mjson verified[0m
+[       OK ] open_document_2007_tests.open_document_xml_special_characters_success (150 ms)
+[----------] 4 tests from open_document_2007_tests (397 ms total)
+
+[----------] 1 test from open_document_read_only_document_2007_tests
+[ RUN      ] open_document_read_only_document_2007_tests.open_read_only_document_request_success
+[32mjson verified[0m
+[       OK ] open_document_read_only_document_2007_tests.open_read_only_document_request_success (87 ms)
+[----------] 1 test from open_document_read_only_document_2007_tests (87 ms total)
+
+[----------] 4 tests from get_document_content_2007_tests
+[ RUN      ] get_document_content_2007_tests.get_document_content_request_success
+[32mjson verified[0m
+checking child: 20
+checking child: 19
+[       OK ] get_document_content_2007_tests.get_document_content_request_success (88 ms)
+[ RUN      ] get_document_content_2007_tests.get_document_content_barcelona_success
+cannot load: ../../../../test-files/integ-test/word/json/get_document_content_2007_tests.get_document_content_barcelona_success.response.json
+src/dcp/integ-test/framework/validate_dcp_response.cc:42: Failure
+Value of: valid_response
+  Actual: false
+Expected: true
+[  FAILED  ] get_document_content_2007_tests.get_document_content_barcelona_success (171 ms)
+[ RUN      ] get_document_content_2007_tests.get_document_content_oxford_guide_success
+cannot load: ../../../../test-files/integ-test/word/json/get_document_content_2007_tests.get_document_content_oxford_guide_success.response.json
+src/dcp/integ-test/framework/validate_dcp_response.cc:42: Failure
+Value of: valid_response
+  Actual: false
+Expected: true
+[  FAILED  ] get_document_content_2007_tests.get_document_content_oxford_guide_success (111 ms)
+[ RUN      ] get_document_content_2007_tests.get_document_content_no_valid_content_success
+[32mjson verified[0m
+[       OK ] get_document_content_2007_tests.get_document_content_no_valid_content_success (88 ms)
+[----------] 4 tests from get_document_content_2007_tests (458 ms total)
+
+[----------] 3 tests from get_document_content_2003_tests
+[ RUN      ] get_document_content_2003_tests.get_document_content_request_success
+E0913 09:00:06.925298 18046 file_system.cc:368] could not find directory entry for: /Data
+E0913 09:00:06.925725 18046 properties_iterator.cc:59] cannot read op. value: unexpected end of buffer
+E0913 09:00:06.926291 18046 section_properties_parser.cc:41] could not get next sprm
+[32mjson verified[0m
+[       OK ] get_document_content_2003_tests.get_document_content_request_success (83 ms)
+[ RUN      ] get_document_content_2003_tests.get_document_content_barcelona_success
+[       OK ] get_document_content_2003_tests.get_document_content_barcelona_success (0 ms)
+[ RUN      ] get_document_content_2003_tests.get_document_content_oxford_guide_success
+[       OK ] get_document_content_2003_tests.get_document_content_oxford_guide_success (0 ms)
+[----------] 3 tests from get_document_content_2003_tests (83 ms total)
+
+[----------] 4 tests from get_document_styles_2007_tests
+[ RUN      ] get_document_styles_2007_tests.get_paragraph_styles_request_success
+[32mjson verified[0m
+[       OK ] get_document_styles_2007_tests.get_paragraph_styles_request_success (98 ms)
+[ RUN      ] get_document_styles_2007_tests.get_character_styles_request_success
+[32mjson verified[0m
+[       OK ] get_document_styles_2007_tests.get_character_styles_request_success (92 ms)
+[ RUN      ] get_document_styles_2007_tests.get_kix_character_styles_request_success
+[32mjson verified[0m
+[       OK ] get_document_styles_2007_tests.get_kix_character_styles_request_success (82 ms)
+[ RUN      ] get_document_styles_2007_tests.get_overridden_styles_request_success
+[32mjson verified[0m
+[       OK ] get_document_styles_2007_tests.get_overridden_styles_request_success (91 ms)
+[----------] 4 tests from get_document_styles_2007_tests (364 ms total)
+
+[----------] 8 tests from headers_and_footers_2003_tests
+[ RUN      ] headers_and_footers_2003_tests.single_section_default_header_success
+E0913 09:00:07.371688 18046 file_system.cc:368] could not find directory entry for: /Data
+E0913 09:00:07.372141 18046 properties_iterator.cc:59] cannot read op. value: unexpected end of buffer
+E0913 09:00:07.372654 18046 section_properties_parser.cc:41] could not get next sprm
+[32mjson verified[0m
+[       OK ] headers_and_footers_2003_tests.single_section_default_header_success (82 ms)
+[ RUN      ] headers_and_footers_2003_tests.single_section_default_footer_success
+E0913 09:00:07.454695 18046 file_system.cc:368] could not find directory entry for: /Data
+E0913 09:00:07.455154 18046 properties_iterator.cc:59] cannot read op. value: unexpected end of buffer
+E0913 09:00:07.455646 18046 section_properties_parser.cc:41] could not get next sprm
+[32mjson verified[0m
+[       OK ] headers_and_footers_2003_tests.single_section_default_footer_success (85 ms)
+[ RUN      ] headers_and_footers_2003_tests.single_section_different_first_page_success
+E0913 09:00:07.540174 18046 file_system.cc:368] could not find directory entry for: /Data
+E0913 09:00:07.540647 18046 properties_iterator.cc:59] cannot read op. value: unexpected end of buffer
+E0913 09:00:07.541086 18046 section_properties_parser.cc:41] could not get next sprm
+[32mjson verified[0m
+[       OK ] headers_and_footers_2003_tests.single_section_different_first_page_success (86 ms)
+[ RUN      ] headers_and_footers_2003_tests.single_section_different_first_odd_even_success
+E0913 09:00:07.626091 18046 file_system.cc:368] could not find directory entry for: /Data
+E0913 09:00:07.626579 18046 properties_iterator.cc:59] cannot read op. value: unexpected end of buffer
+E0913 09:00:07.627046 18046 section_properties_parser.cc:41] could not get next sprm
+E0913 09:00:07.627640 18046 record_factory.cc:62] unsupported record type: 61726
+E0913 09:00:07.628221 18046 record_container.cc:51] DggContainer: unsupported record type: 61726
+E0913 09:00:07.628751 18046 record_container.cc:53] DggContainer: creating a unsupported record instead
+E0913 09:00:07.629256 18046 record_factory.cc:62] unsupported record type: 61448
+E0913 09:00:07.629765 18046 record_container.cc:51] DgContainer: unsupported record type: 61448
+E0913 09:00:07.630352 18046 record_container.cc:53] DgContainer: creating a unsupported record instead
+E0913 09:00:07.630954 18046 record_factory.cc:62] unsupported record type: 61449
+E0913 09:00:07.631526 18046 record_container.cc:51] SpContainer: unsupported record type: 61449
+E0913 09:00:07.632158 18046 record_container.cc:53] SpContainer: creating a unsupported record instead
+E0913 09:00:07.632742 18046 record_factory.cc:62] unsupported record type: 61457
+E0913 09:00:07.633265 18046 record_container.cc:51] SpContainer: unsupported record type: 61457
+E0913 09:00:07.633869 18046 record_container.cc:53] SpContainer: creating a unsupported record instead
+[32mjson verified[0m
+[       OK ] headers_and_footers_2003_tests.single_section_different_first_odd_even_success (93 ms)
+[ RUN      ] headers_and_footers_2003_tests.multiple_sections_default_header_success
+E0913 09:00:07.719075 18046 file_system.cc:368] could not find directory entry for: /Data
+E0913 09:00:07.719516 18046 properties_iterator.cc:59] cannot read op. value: unexpected end of buffer
+E0913 09:00:07.720100 18046 section_properties_parser.cc:41] could not get next sprm
+E0913 09:00:07.720669 18046 properties_iterator.cc:59] cannot read op. value: unexpected end of buffer
+E0913 09:00:07.721249 18046 section_properties_parser.cc:41] could not get next sprm
+E0913 09:00:07.721823 18046 properties_iterator.cc:59] cannot read op. value: unexpected end of buffer
+E0913 09:00:07.722357 18046 section_properties_parser.cc:41] could not get next sprm
+[32mjson verified[0m
+[       OK ] headers_and_footers_2003_tests.multiple_sections_default_header_success (90 ms)
+[ RUN      ] headers_and_footers_2003_tests.multiple_sections_default_footer_success
+E0913 09:00:07.809722 18046 file_system.cc:368] could not find directory entry for: /Data
+E0913 09:00:07.810173 18046 properties_iterator.cc:59] cannot read op. value: unexpected end of buffer
+E0913 09:00:07.810716 18046 section_properties_parser.cc:41] could not get next sprm
+E0913 09:00:07.811298 18046 properties_iterator.cc:59] cannot read op. value: unexpected end of buffer
+E0913 09:00:07.812512 18046 section_properties_parser.cc:41] could not get next sprm
+E0913 09:00:07.812983 18046 properties_iterator.cc:59] cannot read op. value: unexpected end of buffer
+E0913 09:00:07.813468 18046 section_properties_parser.cc:41] could not get next sprm
+[32mjson verified[0m
+[       OK ] headers_and_footers_2003_tests.multiple_sections_default_footer_success (91 ms)
+[ RUN      ] headers_and_footers_2003_tests.last_section_different_first_page_success
+E0913 09:00:07.900836 18046 file_system.cc:368] could not find directory entry for: /Data
+E0913 09:00:07.901271 18046 properties_iterator.cc:59] cannot read op. value: unexpected end of buffer
+E0913 09:00:07.901883 18046 section_properties_parser.cc:41] could not get next sprm
+E0913 09:00:07.902679 18046 properties_iterator.cc:59] cannot read op. value: unexpected end of buffer
+E0913 09:00:07.903292 18046 section_properties_parser.cc:41] could not get next sprm
+E0913 09:00:07.903992 18046 properties_iterator.cc:59] cannot read op. value: unexpected end of buffer
+E0913 09:00:07.904598 18046 section_properties_parser.cc:41] could not get next sprm
+[32mjson verified[0m
+[       OK ] headers_and_footers_2003_tests.last_section_different_first_page_success (94 ms)
+[ RUN      ] headers_and_footers_2003_tests.multiple_sections_different_odd_even_success
+E0913 09:00:07.994885 18046 file_system.cc:368] could not find directory entry for: /Data
+E0913 09:00:07.995339 18046 properties_iterator.cc:59] cannot read op. value: unexpected end of buffer
+E0913 09:00:07.996001 18046 section_properties_parser.cc:41] could not get next sprm
+E0913 09:00:07.996744 18046 properties_iterator.cc:59] cannot read op. value: unexpected end of buffer
+E0913 09:00:07.997539 18046 section_properties_parser.cc:41] could not get next sprm
+E0913 09:00:07.998276 18046 properties_iterator.cc:59] cannot read op. value: unexpected end of buffer
+E0913 09:00:07.999027 18046 section_properties_parser.cc:41] could not get next sprm
+[32mjson verified[0m
+[       OK ] headers_and_footers_2003_tests.multiple_sections_different_odd_even_success (98 ms)
+[----------] 8 tests from headers_and_footers_2003_tests (720 ms total)
+
+[----------] 7 tests from headers_and_footers_2007_tests
+[ RUN      ] headers_and_footers_2007_tests.single_section_default_header_success
+[32mjson verified[0m
+[       OK ] headers_and_footers_2007_tests.single_section_default_header_success (90 ms)
+[ RUN      ] headers_and_footers_2007_tests.single_section_default_footer_success
+[32mjson verified[0m
+[       OK ] headers_and_footers_2007_tests.single_section_default_footer_success (88 ms)
+[ RUN      ] headers_and_footers_2007_tests.single_section_different_first_page_success
+[32mjson verified[0m
+[       OK ] headers_and_footers_2007_tests.single_section_different_first_page_success (88 ms)
+[ RUN      ] headers_and_footers_2007_tests.single_section_different_first_odd_even_success
+[32mjson verified[0m
+[       OK ] headers_and_footers_2007_tests.single_section_different_first_odd_even_success (88 ms)
+[ RUN      ] headers_and_footers_2007_tests.multiple_sections_default_header_success
+cannot load: ../../../../test-files/integ-test/word/json/headers_and_footers_2007_tests/headers_and_footers_2007_tests.multiple_sections_default_header_success.response.json
+src/dcp/integ-test/framework/validate_dcp_response.cc:42: Failure
+Value of: valid_response
+  Actual: false
+Expected: true
+[  FAILED  ] headers_and_footers_2007_tests.multiple_sections_default_header_success (88 ms)
+[ RUN      ] headers_and_footers_2007_tests.multiple_sections_default_footer_success
+cannot load: ../../../../test-files/integ-test/word/json/headers_and_footers_2007_tests/headers_and_footers_2007_tests.multiple_sections_default_footer_success.response.json
+src/dcp/integ-test/framework/validate_dcp_response.cc:42: Failure
+Value of: valid_response
+  Actual: false
+Expected: true
+[  FAILED  ] headers_and_footers_2007_tests.multiple_sections_default_footer_success (89 ms)
+[ RUN      ] headers_and_footers_2007_tests.multiple_sections_different_first_odd_even_success
+cannot load: ../../../../test-files/integ-test/word/json/headers_and_footers_2007_tests/headers_and_footers_2007_tests.multiple_sections_different_first_odd_even_success.response.json
+src/dcp/integ-test/framework/validate_dcp_response.cc:42: Failure
+Value of: valid_response
+  Actual: false
+Expected: true
+[  FAILED  ] headers_and_footers_2007_tests.multiple_sections_different_first_odd_even_success (92 ms)
+[----------] 7 tests from headers_and_footers_2007_tests (623 ms total)
+
+[----------] 2 tests from hyperlinks_2003_tests
+[ RUN      ] hyperlinks_2003_tests.simple_hyperlinks_success
+E0913 09:00:08.715283 18046 properties_iterator.cc:59] cannot read op. value: unexpected end of buffer
+E0913 09:00:08.715639 18046 section_properties_parser.cc:41] could not get next sprm
+E0913 09:00:08.717422 18046 picf.cc:14] invalid mm value: 0
+E0913 09:00:08.717947 18046 picf.cc:33] could not initialize Mfpf structure
+E0913 09:00:08.718736 18046 record_container.cc:36] invalid header
+E0913 09:00:08.719568 18046 inline_sp_container.cc:32] could not initialize SpContainer
+E0913 09:00:08.720429 18046 image_builder_from_pic_location.cc:48] could not load image information
+E0913 09:00:08.721214 18046 paragraph_content_builder.cc:117] could not build picture for: document: Main Document, first cp:     75, last cp:     75
+E0913 09:00:08.722092 18046 picf.cc:14] invalid mm value: 0
+E0913 09:00:08.722831 18046 picf.cc:33] could not initialize Mfpf structure
+E0913 09:00:08.723637 18046 record_container.cc:36] invalid header
+E0913 09:00:08.724455 18046 inline_sp_container.cc:32] could not initialize SpContainer
+E0913 09:00:08.725167 18046 image_builder_from_pic_location.cc:48] could not load image information
+E0913 09:00:08.725978 18046 paragraph_content_builder.cc:117] could not build picture for: document: Main Document, first cp:    137, last cp:    137
+[32mjson verified[0m
+[       OK ] hyperlinks_2003_tests.simple_hyperlinks_success (96 ms)
+[ RUN      ] hyperlinks_2003_tests.hyperlink_spans_multiple_paragraphs_success
+E0913 09:00:08.811326 18046 properties_iterator.cc:59] cannot read op. value: unexpected end of buffer
+E0913 09:00:08.811686 18046 section_properties_parser.cc:41] could not get next sprm
+E0913 09:00:08.813510 18046 picf.cc:14] invalid mm value: 0
+E0913 09:00:08.814030 18046 picf.cc:33] could not initialize Mfpf structure
+E0913 09:00:08.814826 18046 record_container.cc:36] invalid header
+E0913 09:00:08.815631 18046 inline_sp_container.cc:32] could not initialize SpContainer
+E0913 09:00:08.816474 18046 image_builder_from_pic_location.cc:48] could not load image information
+E0913 09:00:08.817777 18046 paragraph_content_builder.cc:117] could not build picture for: document: Main Document, first cp:     99, last cp:     99
+E0913 09:00:08.818569 18046 picf.cc:14] invalid mm value: 0
+E0913 09:00:08.819286 18046 picf.cc:33] could not initialize Mfpf structure
+E0913 09:00:08.820111 18046 record_container.cc:36] invalid header
+E0913 09:00:08.820907 18046 inline_sp_container.cc:32] could not initialize SpContainer
+E0913 09:00:08.821641 18046 image_builder_from_pic_location.cc:48] could not load image information
+E0913 09:00:08.822448 18046 paragraph_content_builder.cc:117] could not build picture for: document: Main Document, first cp:    169, last cp:    169
+[32mjson verified[0m
+[       OK ] hyperlinks_2003_tests.hyperlink_spans_multiple_paragraphs_success (99 ms)
+[----------] 2 tests from hyperlinks_2003_tests (195 ms total)
+
+[----------] 12 tests from images_2003_tests
+[ RUN      ] images_2003_tests.jpg_format_success
+E0913 09:00:08.910552 18046 properties_iterator.cc:59] cannot read op. value: unexpected end of buffer
+E0913 09:00:08.910981 18046 section_properties_parser.cc:41] could not get next sprm
+E0913 09:00:08.912853 18046 record_factory.cc:62] unsupported record type: 61456
+E0913 09:00:08.913183 18046 record_container.cc:51] SpContainer: unsupported record type: 61456
+E0913 09:00:08.914368 18046 record_container.cc:53] SpContainer: creating a unsupported record instead
+[32mjson verified[0m
+[       OK ] images_2003_tests.jpg_format_success (90 ms)
+[ RUN      ] images_2003_tests.png_format_success
+E0913 09:00:09.000673 18046 properties_iterator.cc:59] cannot read op. value: unexpected end of buffer
+E0913 09:00:09.001059 18046 section_properties_parser.cc:41] could not get next sprm
+E0913 09:00:09.001904 18046 record_factory.cc:62] unsupported record type: 61726
+E0913 09:00:09.002640 18046 record_container.cc:51] DggContainer: unsupported record type: 61726
+E0913 09:00:09.003372 18046 record_container.cc:53] DggContainer: creating a unsupported record instead
+E0913 09:00:09.004217 18046 record_factory.cc:62] unsupported record type: 61448
+E0913 09:00:09.004997 18046 record_container.cc:51] DgContainer: unsupported record type: 61448
+E0913 09:00:09.005805 18046 record_container.cc:53] DgContainer: creating a unsupported record instead
+E0913 09:00:09.006422 18046 record_factory.cc:62] unsupported record type: 61449
+E0913 09:00:09.007187 18046 record_container.cc:51] SpContainer: unsupported record type: 61449
+E0913 09:00:09.007988 18046 record_container.cc:53] SpContainer: creating a unsupported record instead
+E0913 09:00:09.008843 18046 record_factory.cc:62] unsupported record type: 61457
+E0913 09:00:09.009636 18046 record_container.cc:51] SpContainer: unsupported record type: 61457
+E0913 09:00:09.010442 18046 record_container.cc:53] SpContainer: creating a unsupported record instead
+E0913 09:00:09.012208 18046 record_factory.cc:62] unsupported record type: 61456
+E0913 09:00:09.012670 18046 record_container.cc:51] SpContainer: unsupported record type: 61456
+E0913 09:00:09.013489 18046 record_container.cc:53] SpContainer: creating a unsupported record instead
+[32mjson verified[0m
+[       OK ] images_2003_tests.png_format_success (98 ms)
+[ RUN      ] images_2003_tests.bmp_format_success
+E0913 09:00:09.098000 18046 properties_iterator.cc:59] cannot read op. value: unexpected end of buffer
+E0913 09:00:09.098774 18046 section_properties_parser.cc:41] could not get next sprm
+E0913 09:00:09.100512 18046 record_factory.cc:62] unsupported record type: 61456
+E0913 09:00:09.100980 18046 record_container.cc:51] SpContainer: unsupported record type: 61456
+E0913 09:00:09.101764 18046 record_container.cc:53] SpContainer: creating a unsupported record instead
+[32mjson verified[0m
+[       OK ] images_2003_tests.bmp_format_success (87 ms)
+[ RUN      ] images_2003_tests.emf_format_success
+E0913 09:00:09.187085 18046 properties_iterator.cc:59] cannot read op. value: unexpected end of buffer
+E0913 09:00:09.187490 18046 section_properties_parser.cc:41] could not get next sprm
+E0913 09:00:09.189599 18046 record_factory.cc:62] unsupported record type: 61456
+E0913 09:00:09.190168 18046 record_container.cc:51] SpContainer: unsupported record type: 61456
+E0913 09:00:09.190840 18046 record_container.cc:53] SpContainer: creating a unsupported record instead
+[32mjson verified[0m
+[       OK ] images_2003_tests.emf_format_success (514 ms)
+[ RUN      ] images_2003_tests.cropped_emf_format_success
+E0913 09:00:09.701526 18046 properties_iterator.cc:59] cannot read op. value: unexpected end of buffer
+E0913 09:00:09.701961 18046 section_properties_parser.cc:41] could not get next sprm
+E0913 09:00:09.703600 18046 record_factory.cc:62] unsupported record type: 61456
+E0913 09:00:09.704041 18046 record_container.cc:51] SpContainer: unsupported record type: 61456
+E0913 09:00:09.704787 18046 record_container.cc:53] SpContainer: creating a unsupported record instead
+[32mjson verified[0m
+[       OK ] images_2003_tests.cropped_emf_format_success (513 ms)
+[ RUN      ] images_2003_tests.wmf_format_success
+E0913 09:00:10.212383 18046 properties_iterator.cc:59] cannot read op. value: unexpected end of buffer
+E0913 09:00:10.212743 18046 section_properties_parser.cc:41] could not get next sprm
+E0913 09:00:10.213595 18046 record_factory.cc:62] unsupported record type: 61726
+E0913 09:00:10.214095 18046 record_container.cc:51] DggContainer: unsupported record type: 61726
+E0913 09:00:10.214702 18046 record_container.cc:53] DggContainer: creating a unsupported record instead
+E0913 09:00:10.215323 18046 record_factory.cc:62] unsupported record type: 61448
+E0913 09:00:10.215934 18046 record_container.cc:51] DgContainer: unsupported record type: 61448
+E0913 09:00:10.216513 18046 record_container.cc:53] DgContainer: creating a unsupported record instead
+E0913 09:00:10.217133 18046 record_factory.cc:62] unsupported record type: 61449
+E0913 09:00:10.217731 18046 record_container.cc:51] SpContainer: unsupported record type: 61449
+E0913 09:00:10.218372 18046 record_container.cc:53] SpContainer: creating a unsupported record instead
+E0913 09:00:10.219354 18046 record_factory.cc:62] unsupported record type: 61457
+E0913 09:00:10.219835 18046 record_container.cc:51] SpContainer: unsupported record type: 61457
+E0913 09:00:10.220455 18046 record_container.cc:53] SpContainer: creating a unsupported record instead
+E0913 09:00:10.221907 18046 record_factory.cc:62] unsupported record type: 61456
+E0913 09:00:10.222276 18046 record_container.cc:51] SpContainer: unsupported record type: 61456
+E0913 09:00:10.222908 18046 record_container.cc:53] SpContainer: creating a unsupported record instead
+[32mjson verified[0m
+[       OK ] images_2003_tests.wmf_format_success (186 ms)
+[ RUN      ] images_2003_tests.cropped_wmf_format_success
+E0913 09:00:10.398295 18046 properties_iterator.cc:59] cannot read op. value: unexpected end of buffer
+E0913 09:00:10.398672 18046 section_properties_parser.cc:41] could not get next sprm
+E0913 09:00:10.399480 18046 record_factory.cc:62] unsupported record type: 61726
+E0913 09:00:10.400076 18046 record_container.cc:51] DggContainer: unsupported record type: 61726
+E0913 09:00:10.400702 18046 record_container.cc:53] DggContainer: creating a unsupported record instead
+E0913 09:00:10.401419 18046 record_factory.cc:62] unsupported record type: 61448
+E0913 09:00:10.402099 18046 record_container.cc:51] DgContainer: unsupported record type: 61448
+E0913 09:00:10.402727 18046 record_container.cc:53] DgContainer: creating a unsupported record instead
+E0913 09:00:10.403419 18046 record_factory.cc:62] unsupported record type: 61449
+E0913 09:00:10.404114 18046 record_container.cc:51] SpContainer: unsupported record type: 61449
+E0913 09:00:10.404733 18046 record_container.cc:53] SpContainer: creating a unsupported record instead
+E0913 09:00:10.405371 18046 record_factory.cc:62] unsupported record type: 61457
+E0913 09:00:10.405982 18046 record_container.cc:51] SpContainer: unsupported record type: 61457
+E0913 09:00:10.406664 18046 record_container.cc:53] SpContainer: creating a unsupported record instead
+E0913 09:00:10.408571 18046 record_factory.cc:62] unsupported record type: 61456
+E0913 09:00:10.408952 18046 record_container.cc:51] SpContainer: unsupported record type: 61456
+E0913 09:00:10.409564 18046 record_container.cc:53] SpContainer: creating a unsupported record instead
+[32mjson verified[0m
+[       OK ] images_2003_tests.cropped_wmf_format_success (184 ms)
+[ RUN      ] images_2003_tests.different_image_sizes_success
+E0913 09:00:10.583348 18046 properties_iterator.cc:59] cannot read op. value: unexpected end of buffer
+E0913 09:00:10.583724 18046 section_properties_parser.cc:41] could not get next sprm
+E0913 09:00:10.584720 18046 record_factory.cc:62] unsupported record type: 61726
+E0913 09:00:10.585340 18046 record_container.cc:51] DggContainer: unsupported record type: 61726
+E0913 09:00:10.585953 18046 record_container.cc:53] DggContainer: creating a unsupported record instead
+E0913 09:00:10.586670 18046 record_factory.cc:62] unsupported record type: 61448
+E0913 09:00:10.587350 18046 record_container.cc:51] DgContainer: unsupported record type: 61448
+E0913 09:00:10.587965 18046 record_container.cc:53] DgContainer: creating a unsupported record instead
+E0913 09:00:10.588695 18046 record_factory.cc:62] unsupported record type: 61449
+E0913 09:00:10.589411 18046 record_container.cc:51] SpContainer: unsupported record type: 61449
+E0913 09:00:10.589998 18046 record_container.cc:53] SpContainer: creating a unsupported record instead
+E0913 09:00:10.590651 18046 record_factory.cc:62] unsupported record type: 61457
+E0913 09:00:10.591305 18046 record_container.cc:51] SpContainer: unsupported record type: 61457
+E0913 09:00:10.592002 18046 record_container.cc:53] SpContainer: creating a unsupported record instead
+E0913 09:00:10.593442 18046 record_factory.cc:62] unsupported record type: 61456
+E0913 09:00:10.593847 18046 record_container.cc:51] SpContainer: unsupported record type: 61456
+E0913 09:00:10.594547 18046 record_container.cc:53] SpContainer: creating a unsupported record instead
+E0913 09:00:10.595255 18046 record_factory.cc:62] unsupported record type: 61456
+E0913 09:00:10.595998 18046 record_container.cc:51] SpContainer: unsupported record type: 61456
+E0913 09:00:10.596577 18046 record_container.cc:53] SpContainer: creating a unsupported record instead
+E0913 09:00:10.597280 18046 record_factory.cc:62] unsupported record type: 61456
+E0913 09:00:10.598196 18046 record_container.cc:51] SpContainer: unsupported record type: 61456
+E0913 09:00:10.598891 18046 record_container.cc:53] SpContainer: creating a unsupported record instead
+E0913 09:00:10.599611 18046 record_factory.cc:62] unsupported record type: 61456
+E0913 09:00:10.600215 18046 record_container.cc:51] SpContainer: unsupported record type: 61456
+E0913 09:00:10.600841 18046 record_container.cc:53] SpContainer: creating a unsupported record instead
+[32mjson verified[0m
+[       OK ] images_2003_tests.different_image_sizes_success (104 ms)
+[ RUN      ] images_2003_tests.different_cropping_values_success
+E0913 09:00:10.688068 18046 properties_iterator.cc:59] cannot read op. value: unexpected end of buffer
+E0913 09:00:10.688457 18046 section_properties_parser.cc:41] could not get next sprm
+E0913 09:00:10.690259 18046 record_factory.cc:62] unsupported record type: 61456
+E0913 09:00:10.690644 18046 record_container.cc:51] SpContainer: unsupported record type: 61456
+E0913 09:00:10.691335 18046 record_container.cc:53] SpContainer: creating a unsupported record instead
+E0913 09:00:10.692067 18046 record_factory.cc:62] unsupported record type: 61456
+E0913 09:00:10.692646 18046 record_container.cc:51] SpContainer: unsupported record type: 61456
+E0913 09:00:10.693291 18046 record_container.cc:53] SpContainer: creating a unsupported record instead
+E0913 09:00:10.694067 18046 record_factory.cc:62] unsupported record type: 61456
+E0913 09:00:10.694671 18046 record_container.cc:51] SpContainer: unsupported record type: 61456
+E0913 09:00:10.695301 18046 record_container.cc:53] SpContainer: creating a unsupported record instead
+E0913 09:00:10.696161 18046 record_factory.cc:62] unsupported record type: 61456
+E0913 09:00:10.696732 18046 record_container.cc:51] SpContainer: unsupported record type: 61456
+E0913 09:00:10.697712 18046 record_container.cc:53] SpContainer: creating a unsupported record instead
+E0913 09:00:10.698452 18046 record_factory.cc:62] unsupported record type: 61456
+E0913 09:00:10.699028 18046 record_container.cc:51] SpContainer: unsupported record type: 61456
+E0913 09:00:10.699655 18046 record_container.cc:53] SpContainer: creating a unsupported record instead
+E0913 09:00:10.700471 18046 record_factory.cc:62] unsupported record type: 61456
+E0913 09:00:10.700952 18046 record_container.cc:51] SpContainer: unsupported record type: 61456
+E0913 09:00:10.701577 18046 record_container.cc:53] SpContainer: creating a unsupported record instead
+E0913 09:00:10.702373 18046 record_factory.cc:62] unsupported record type: 61456
+E0913 09:00:10.702966 18046 record_container.cc:51] SpContainer: unsupported record type: 61456
+E0913 09:00:10.703605 18046 record_container.cc:53] SpContainer: creating a unsupported record instead
+E0913 09:00:10.704449 18046 record_factory.cc:62] unsupported record type: 61456
+E0913 09:00:10.705193 18046 record_container.cc:51] SpContainer: unsupported record type: 61456
+E0913 09:00:10.705710 18046 record_container.cc:53] SpContainer: creating a unsupported record instead
+cannot load: ../../../../test-files/integ-test/word/json/images_2003_tests/images_2003_tests.different_cropping_values_success.response.json
+src/dcp/integ-test/framework/validate_dcp_response.cc:42: Failure
+Value of: valid_response
+  Actual: false
+Expected: true
+[  FAILED  ] images_2003_tests.different_cropping_values_success (109 ms)
+[ RUN      ] images_2003_tests.not_inline_jpg_format_success
+E0913 09:00:10.795055 18046 file_system.cc:368] could not find directory entry for: /Data
+E0913 09:00:10.795506 18046 properties_iterator.cc:59] cannot read op. value: unexpected end of buffer
+E0913 09:00:10.796138 18046 section_properties_parser.cc:41] could not get next sprm
+E0913 09:00:10.796913 18046 record_factory.cc:62] unsupported record type: 61726
+E0913 09:00:10.797541 18046 record_container.cc:51] DggContainer: unsupported record type: 61726
+E0913 09:00:10.798286 18046 record_container.cc:53] DggContainer: creating a unsupported record instead
+E0913 09:00:10.798950 18046 record_factory.cc:62] unsupported record type: 61448
+E0913 09:00:10.799764 18046 record_container.cc:51] DgContainer: unsupported record type: 61448
+E0913 09:00:10.800467 18046 record_container.cc:53] DgContainer: creating a unsupported record instead
+E0913 09:00:10.801105 18046 record_factory.cc:62] unsupported record type: 61449
+E0913 09:00:10.801692 18046 record_container.cc:51] SpContainer: unsupported record type: 61449
+E0913 09:00:10.802299 18046 record_container.cc:53] SpContainer: creating a unsupported record instead
+E0913 09:00:10.803357 18046 record_factory.cc:62] unsupported record type: 61456
+E0913 09:00:10.804018 18046 record_container.cc:51] SpContainer: unsupported record type: 61456
+E0913 09:00:10.804657 18046 record_container.cc:53] SpContainer: creating a unsupported record instead
+E0913 09:00:10.805377 18046 record_factory.cc:62] unsupported record type: 61457
+E0913 09:00:10.806030 18046 record_container.cc:51] SpContainer: unsupported record type: 61457
+E0913 09:00:10.806663 18046 record_container.cc:53] SpContainer: creating a unsupported record instead
+E0913 09:00:10.807402 18046 record_factory.cc:62] unsupported record type: 61457
+E0913 09:00:10.808051 18046 record_container.cc:51] SpContainer: unsupported record type: 61457
+E0913 09:00:10.808699 18046 record_container.cc:53] SpContainer: creating a unsupported record instead
+[32mjson verified[0m
+[       OK ] images_2003_tests.not_inline_jpg_format_success (98 ms)
+[ RUN      ] images_2003_tests.not_inline_emf_format_success
+E0913 09:00:10.893646 18046 file_system.cc:368] could not find directory entry for: /Data
+E0913 09:00:10.894047 18046 properties_iterator.cc:59] cannot read op. value: unexpected end of buffer
+E0913 09:00:10.894928 18046 section_properties_parser.cc:41] could not get next sprm
+E0913 09:00:10.895721 18046 record_factory.cc:62] unsupported record type: 61726
+E0913 09:00:10.896255 18046 record_container.cc:51] DggContainer: unsupported record type: 61726
+E0913 09:00:10.896952 18046 record_container.cc:53] DggContainer: creating a unsupported record instead
+E0913 09:00:10.897574 18046 record_factory.cc:62] unsupported record type: 61448
+E0913 09:00:10.898272 18046 record_container.cc:51] DgContainer: unsupported record type: 61448
+E0913 09:00:10.898931 18046 record_container.cc:53] DgContainer: creating a unsupported record instead
+E0913 09:00:10.899924 18046 record_factory.cc:62] unsupported record type: 61449
+E0913 09:00:10.900606 18046 record_container.cc:51] SpContainer: unsupported record type: 61449
+E0913 09:00:10.901300 18046 record_container.cc:53] SpContainer: creating a unsupported record instead
+E0913 09:00:10.901957 18046 record_factory.cc:62] unsupported record type: 61456
+E0913 09:00:10.902523 18046 record_container.cc:51] SpContainer: unsupported record type: 61456
+E0913 09:00:10.903133 18046 record_container.cc:53] SpContainer: creating a unsupported record instead
+E0913 09:00:10.903946 18046 record_factory.cc:62] unsupported record type: 61457
+E0913 09:00:10.904672 18046 record_container.cc:51] SpContainer: unsupported record type: 61457
+E0913 09:00:10.905361 18046 record_container.cc:53] SpContainer: creating a unsupported record instead
+E0913 09:00:10.906100 18046 record_factory.cc:62] unsupported record type: 61457
+E0913 09:00:10.906786 18046 record_container.cc:51] SpContainer: unsupported record type: 61457
+E0913 09:00:10.907578 18046 record_container.cc:53] SpContainer: creating a unsupported record instead
+[32mjson verified[0m
+[       OK ] images_2003_tests.not_inline_emf_format_success (189 ms)
+[ RUN      ] images_2003_tests.not_inline_wmf_format_success
+E0913 09:00:11.082445 18046 file_system.cc:368] could not find directory entry for: /Data
+E0913 09:00:11.082953 18046 properties_iterator.cc:59] cannot read op. value: unexpected end of buffer
+E0913 09:00:11.083760 18046 section_properties_parser.cc:41] could not get next sprm
+E0913 09:00:11.084658 18046 record_factory.cc:62] unsupported record type: 61726
+E0913 09:00:11.085340 18046 record_container.cc:51] DggContainer: unsupported record type: 61726
+E0913 09:00:11.085963 18046 record_container.cc:53] DggContainer: creating a unsupported record instead
+E0913 09:00:11.086789 18046 record_factory.cc:62] unsupported record type: 61448
+E0913 09:00:11.087484 18046 record_container.cc:51] DgContainer: unsupported record type: 61448
+E0913 09:00:11.088310 18046 record_container.cc:53] DgContainer: creating a unsupported record instead
+E0913 09:00:11.088999 18046 record_factory.cc:62] unsupported record type: 61449
+E0913 09:00:11.089699 18046 record_container.cc:51] SpContainer: unsupported record type: 61449
+E0913 09:00:11.090425 18046 record_container.cc:53] SpContainer: creating a unsupported record instead
+E0913 09:00:11.091248 18046 record_factory.cc:62] unsupported record type: 61456
+E0913 09:00:11.091850 18046 record_container.cc:51] SpContainer: unsupported record type: 61456
+E0913 09:00:11.093019 18046 record_container.cc:53] SpContainer: creating a unsupported record instead
+E0913 09:00:11.093782 18046 record_factory.cc:62] unsupported record type: 61457
+E0913 09:00:11.094570 18046 record_container.cc:51] SpContainer: unsupported record type: 61457
+E0913 09:00:11.095377 18046 record_container.cc:53] SpContainer: creating a unsupported record instead
+E0913 09:00:11.096155 18046 record_factory.cc:62] unsupported record type: 61457
+E0913 09:00:11.096796 18046 record_container.cc:51] SpContainer: unsupported record type: 61457
+E0913 09:00:11.097422 18046 record_container.cc:53] SpContainer: creating a unsupported record instead
+[32mjson verified[0m
+[       OK ] images_2003_tests.not_inline_wmf_format_success (190 ms)
+[----------] 12 tests from images_2003_tests (2362 ms total)
+
+[----------] 18 tests from images_2007_tests
+[ RUN      ] images_2007_tests.bmp_format_success
+[32mjson verified[0m
+checking child: 30
+[       OK ] images_2007_tests.bmp_format_success (87 ms)
+[ RUN      ] images_2007_tests.different_image_sizes_success
+E0913 09:00:11.364650 18046 drawing_processenator.cc:120] cannot create image: invalid drawing information
+E0913 09:00:11.366322 18046 drawing_processenator.cc:120] cannot create image: invalid drawing information
+E0913 09:00:11.367851 18046 drawing_processenator.cc:120] cannot create image: invalid drawing information
+[32mjson verified[0m
+[       OK ] images_2007_tests.different_image_sizes_success (103 ms)
+[ RUN      ] images_2007_tests.gif_format_success
+[32mjson verified[0m
+checking child: 29
+[       OK ] images_2007_tests.gif_format_success (87 ms)
+[ RUN      ] images_2007_tests.image_in_paragraph_success
+[32mjson verified[0m
+[       OK ] images_2007_tests.image_in_paragraph_success (104 ms)
+[ RUN      ] images_2007_tests.image_in_text_success
+[32mjson verified[0m
+[       OK ] images_2007_tests.image_in_text_success (86 ms)
+[ RUN      ] images_2007_tests.jpg_format_success
+[32mjson verified[0m
+[       OK ] images_2007_tests.jpg_format_success (89 ms)
+[ RUN      ] images_2007_tests.multiple_image_formats_success
+E0913 09:00:12.050379 18046 drawing_processenator.cc:120] cannot create image: invalid drawing information
+[32mjson verified[0m
+checking child: 83
+[       OK ] images_2007_tests.multiple_image_formats_success (320 ms)
+[ RUN      ] images_2007_tests.png_format_success
+[32mjson verified[0m
+[       OK ] images_2007_tests.png_format_success (89 ms)
+[ RUN      ] images_2007_tests.repeated_image_success
+[32mjson verified[0m
+[       OK ] images_2007_tests.repeated_image_success (90 ms)
+[ RUN      ] images_2007_tests.tif_format_unsupported_success
+E0913 09:00:12.520771 18046 drawing_processenator.cc:120] cannot create image: invalid drawing information
+[32mjson verified[0m
+checking child: 32
+[       OK ] images_2007_tests.tif_format_unsupported_success (297 ms)
+[ RUN      ] images_2007_tests.unsupported_chart_success
+E0913 09:00:12.628659 18046 drawing_processenator.cc:120] cannot create image: invalid drawing information
+[32mjson verified[0m
+checking child: 24
+[       OK ] images_2007_tests.unsupported_chart_success (107 ms)
+[ RUN      ] images_2007_tests.unsupported_smart_art_success
+E0913 09:00:12.735949 18046 drawing_processenator.cc:120] cannot create image: invalid drawing information
+[32mjson verified[0m
+checking child: 26
+checking child: 25
+[       OK ] images_2007_tests.unsupported_smart_art_success (108 ms)
+[ RUN      ] images_2007_tests.emf_format_success
+[32mjson verified[0m
+checking child: 59
+[       OK ] images_2007_tests.emf_format_success (534 ms)
+[ RUN      ] images_2007_tests.cropped_emf_format_success
+[32mjson verified[0m
+[       OK ] images_2007_tests.cropped_emf_format_success (536 ms)
+[ RUN      ] images_2007_tests.wmf_format_success
+[32mjson verified[0m
+[       OK ] images_2007_tests.wmf_format_success (202 ms)
+[ RUN      ] images_2007_tests.cropped_wmf_format_success
+[32mjson verified[0m
+[       OK ] images_2007_tests.cropped_wmf_format_success (205 ms)
+[ RUN      ] images_2007_tests.not_inline_emf_format_success
+[32mjson verified[0m
+[       OK ] images_2007_tests.not_inline_emf_format_success (540 ms)
+[ RUN      ] images_2007_tests.not_inline_wmf_format_success
+[32mjson verified[0m
+[       OK ] images_2007_tests.not_inline_wmf_format_success (206 ms)
+[----------] 18 tests from images_2007_tests (3792 ms total)
+
+[----------] 4 tests from insert_text_2007_tests
+[ RUN      ] insert_text_2007_tests.insert_text_at_start_success
+[32mjson verified[0m
+checking child: 20
+checking child: 19
+checking child: 20
+checking child: 19
+[       OK ] insert_text_2007_tests.insert_text_at_start_success (108 ms)
+[ RUN      ] insert_text_2007_tests.insert_text_at_middle_success
+[32mjson verified[0m
+checking child: 20
+checking child: 19
+checking child: 20
+checking child: 19
+[       OK ] insert_text_2007_tests.insert_text_at_middle_success (107 ms)
+[ RUN      ] insert_text_2007_tests.insert_text_at_end_success
+[32mjson verified[0m
+checking child: 20
+checking child: 19
+checking child: 20
+checking child: 19
+[       OK ] insert_text_2007_tests.insert_text_at_end_success (105 ms)
+[ RUN      ] insert_text_2007_tests.insert_text_invalid_offset
+E0913 09:00:15.387389 18046 insert_text.cc:118] InsertText: invalid index 777
+E0913 09:00:15.387805 18046 command_base.cc:25] CommandBase: Apply failure
+E0913 09:00:15.388629 18046 transaction_manager.cc:69] TransactionManager: Unable to apply command
+E0913 09:00:15.389238 18046 unable_to_edit_error.cc:16] error: UnableToEditError : Error: ued Error Message: unable to edit  Insert text failed
+[32mjson verified[0m
+checking child: 20
+checking child: 19
+[       OK ] insert_text_2007_tests.insert_text_invalid_offset (107 ms)
+[----------] 4 tests from insert_text_2007_tests (427 ms total)
+
+[----------] 4 tests from page_numbers_2003_tests
+[ RUN      ] page_numbers_2003_tests.single_section_footer_upper_roman_left_indent_success
+E0913 09:00:15.492125 18046 file_system.cc:368] could not find directory entry for: /Data
+E0913 09:00:15.492643 18046 properties_iterator.cc:59] cannot read op. value: unexpected end of buffer
+E0913 09:00:15.493330 18046 section_properties_parser.cc:41] could not get next sprm
+[32mjson verified[0m
+[       OK ] page_numbers_2003_tests.single_section_footer_upper_roman_left_indent_success (110 ms)
+[ RUN      ] page_numbers_2003_tests.single_section_header_lower_letter_left_indent_success
+E0913 09:00:15.601377 18046 file_system.cc:368] could not find directory entry for: /Data
+E0913 09:00:15.601835 18046 properties_iterator.cc:59] cannot read op. value: unexpected end of buffer
+E0913 09:00:15.602463 18046 section_properties_parser.cc:41] could not get next sprm
+[32mjson verified[0m
+[       OK ] page_numbers_2003_tests.single_section_header_lower_letter_left_indent_success (109 ms)
+[ RUN      ] page_numbers_2003_tests.single_section_header_lower_roman_left_indent_success
+E0913 09:00:15.710387 18046 file_system.cc:368] could not find directory entry for: /Data
+E0913 09:00:15.710891 18046 properties_iterator.cc:59] cannot read op. value: unexpected end of buffer
+E0913 09:00:15.711464 18046 section_properties_parser.cc:41] could not get next sprm
+[32mjson verified[0m
+[       OK ] page_numbers_2003_tests.single_section_header_lower_roman_left_indent_success (110 ms)
+[ RUN      ] page_numbers_2003_tests.multiple_sections_header_left_indent_success
+E0913 09:00:15.821300 18046 file_system.cc:368] could not find directory entry for: /Data
+E0913 09:00:15.822072 18046 properties_iterator.cc:59] cannot read op. value: unexpected end of buffer
+E0913 09:00:15.822602 18046 section_properties_parser.cc:41] could not get next sprm
+E0913 09:00:15.823248 18046 properties_iterator.cc:59] cannot read op. value: unexpected end of buffer
+E0913 09:00:15.823792 18046 section_properties_parser.cc:41] could not get next sprm
+E0913 09:00:15.824444 18046 properties_iterator.cc:59] cannot read op. value: unexpected end of buffer
+E0913 09:00:15.825139 18046 section_properties_parser.cc:41] could not get next sprm
+[32mjson verified[0m
+[       OK ] page_numbers_2003_tests.multiple_sections_header_left_indent_success (119 ms)
+[----------] 4 tests from page_numbers_2003_tests (449 ms total)
+
+[----------] 4 tests from page_numbers_2007_tests
+[ RUN      ] page_numbers_2007_tests.page_number_one_complex_field_success
+[32mjson verified[0m
+checking child: 44
+[       OK ] page_numbers_2007_tests.page_number_one_complex_field_success (112 ms)
+[ RUN      ] page_numbers_2007_tests.page_number_two_complex_field_failure
+[32mjson verified[0m
+[       OK ] page_numbers_2007_tests.page_number_two_complex_field_failure (114 ms)
+[ RUN      ] page_numbers_2007_tests.page_number_lower_roman_success
+[32mjson verified[0m
+[       OK ] page_numbers_2007_tests.page_number_lower_roman_success (121 ms)
+[ RUN      ] page_numbers_2007_tests.multiple_sections_header_left_indent_success
+[32mjson verified[0m
+[       OK ] page_numbers_2007_tests.multiple_sections_header_left_indent_success (124 ms)
+[----------] 4 tests from page_numbers_2007_tests (471 ms total)
+
+[----------] 2 tests from date_time_2007_tests
+[ RUN      ] date_time_2007_tests.date_time_one_complex_field_success
+[32mjson verified[0m
+[       OK ] date_time_2007_tests.date_time_one_complex_field_success (110 ms)
+[ RUN      ] date_time_2007_tests.date_time_multiple_complex_field_success
+[32mjson verified[0m
+[       OK ] date_time_2007_tests.date_time_multiple_complex_field_success (112 ms)
+[----------] 2 tests from date_time_2007_tests (222 ms total)
+
+[----------] 3 tests from paragraph_properties_2007_tests
+[ RUN      ] paragraph_properties_2007_tests.indenting_success
+cannot load: ../../../../test-files/integ-test/word/json/paragraph_properties_2007_tests/paragraph_properties_2007_tests.indenting_success.response.json.dcp
+src/dcp/integ-test/framework/validate_dcp_response.cc:42: Failure
+Value of: valid_response
+  Actual: false
+Expected: true
+[  FAILED  ] paragraph_properties_2007_tests.indenting_success (109 ms)
+[ RUN      ] paragraph_properties_2007_tests.line_spacing_success
+cannot load: ../../../../test-files/integ-test/word/json/paragraph_properties_2007_tests/paragraph_properties_2007_tests.line_spacing_success.response.json.dcp
+src/dcp/integ-test/framework/validate_dcp_response.cc:42: Failure
+Value of: valid_response
+  Actual: false
+Expected: true
+[  FAILED  ] paragraph_properties_2007_tests.line_spacing_success (110 ms)
+[ RUN      ] paragraph_properties_2007_tests.space_before_after_success
+cannot load: ../../../../test-files/integ-test/word/json/paragraph_properties_2007_tests/paragraph_properties_2007_tests.space_before_after_success.response.json.dcp
+src/dcp/integ-test/framework/validate_dcp_response.cc:42: Failure
+Value of: valid_response
+  Actual: false
+Expected: true
+[  FAILED  ] paragraph_properties_2007_tests.space_before_after_success (108 ms)
+[----------] 3 tests from paragraph_properties_2007_tests (327 ms total)
+
+[----------] 16 tests from move_node_2007_tests
+[ RUN      ] move_node_2007_tests.move_first_node_to_first_same_parent_success
+[32mjson verified[0m
+checking child: 25
+checking child: 24
+checking child: 25
+checking child: 24
+[       OK ] move_node_2007_tests.move_first_node_to_first_same_parent_success (107 ms)
+[ RUN      ] move_node_2007_tests.move_first_node_to_middle_same_parent_success
+[32mjson verified[0m
+checking child: 25
+checking child: 24
+checking child: 25
+checking child: 24
+[       OK ] move_node_2007_tests.move_first_node_to_middle_same_parent_success (107 ms)
+[ RUN      ] move_node_2007_tests.move_first_node_to_last_same_parent_success
+[32mjson verified[0m
+checking child: 25
+checking child: 24
+checking child: 25
+checking child: 20
+[       OK ] move_node_2007_tests.move_first_node_to_last_same_parent_success (111 ms)
+[ RUN      ] move_node_2007_tests.move_middle_node_to_first_same_parent_success
+[32mjson verified[0m
+checking child: 25
+checking child: 24
+checking child: 25
+checking child: 24
+[       OK ] move_node_2007_tests.move_middle_node_to_first_same_parent_success (108 ms)
+[ RUN      ] move_node_2007_tests.move_middle_node_to_middle_same_parent_success
+[32mjson verified[0m
+checking child: 25
+checking child: 24
+checking child: 25
+checking child: 24
+[       OK ] move_node_2007_tests.move_middle_node_to_middle_same_parent_success (107 ms)
+[ RUN      ] move_node_2007_tests.move_middle_node_to_last_same_parent_success
+[32mjson verified[0m
+checking child: 25
+checking child: 24
+checking child: 25
+checking child: 22
+[       OK ] move_node_2007_tests.move_middle_node_to_last_same_parent_success (108 ms)
+[ RUN      ] move_node_2007_tests.move_last_node_to_first_same_parent_success
+[32mjson verified[0m
+checking child: 25
+checking child: 24
+checking child: 25
+checking child: 23
+[       OK ] move_node_2007_tests.move_last_node_to_first_same_parent_success (107 ms)
+[ RUN      ] move_node_2007_tests.move_last_node_to_middle_same_parent_success
+[32mjson verified[0m
+checking child: 25
+checking child: 24
+checking child: 25
+checking child: 23
+[       OK ] move_node_2007_tests.move_last_node_to_middle_same_parent_success (107 ms)
+[ RUN      ] move_node_2007_tests.move_last_node_to_last_same_parent_success
+[32mjson verified[0m
+checking child: 25
+checking child: 24
+checking child: 25
+checking child: 24
+[       OK ] move_node_2007_tests.move_last_node_to_last_same_parent_success (106 ms)
+[ RUN      ] move_node_2007_tests.move_node_to_first_diff_parent_success
+[32mjson verified[0m
+[       OK ] move_node_2007_tests.move_node_to_first_diff_parent_success (107 ms)
+[ RUN      ] move_node_2007_tests.move_node_to_middle_diff_parent_success
+[32mjson verified[0m
+[       OK ] move_node_2007_tests.move_node_to_middle_diff_parent_success (109 ms)
+[ RUN      ] move_node_2007_tests.move_node_to_last_diff_parent_success
+[32mjson verified[0m
+[       OK ] move_node_2007_tests.move_node_to_last_diff_parent_success (107 ms)
+[ RUN      ] move_node_2007_tests.move_node_invalid_node_id
+E0913 09:00:18.256932 18046 move_node.cc:66] MoveNode: node(6334) not found
+E0913 09:00:18.257326 18046 command_base.cc:25] CommandBase: Apply failure
+E0913 09:00:18.258280 18046 transaction_manager.cc:69] TransactionManager: Unable to apply command
+E0913 09:00:18.259332 18046 unable_to_edit_error.cc:16] error: UnableToEditError : Error: ued Error Message: unable to edit  Reparent operation failed
+[32mjson verified[0m
+[       OK ] move_node_2007_tests.move_node_invalid_node_id (110 ms)
+[ RUN      ] move_node_2007_tests.move_node_invalid_parent_id
+E0913 09:00:18.367352 18046 move_node.cc:63] MoveNode: new parent(3125) not found
+E0913 09:00:18.367753 18046 command_base.cc:25] CommandBase: Apply failure
+E0913 09:00:18.368438 18046 transaction_manager.cc:69] TransactionManager: Unable to apply command
+E0913 09:00:18.369032 18046 unable_to_edit_error.cc:16] error: UnableToEditError : Error: ued Error Message: unable to edit  Reparent operation failed
+[32mjson verified[0m
+[       OK ] move_node_2007_tests.move_node_invalid_parent_id (109 ms)
+[ RUN      ] move_node_2007_tests.move_node_invalid_sibling_id
+E0913 09:00:18.475821 18046 invalid_parameter_error.cc:16] error: InvalidParameterError : Error: ivp Error Message: invalid parameter  Invalid sibling ID or parent ID
+[32mjson verified[0m
+[       OK ] move_node_2007_tests.move_node_invalid_sibling_id (107 ms)
+[ RUN      ] move_node_2007_tests.move_node_invalid_sibling_parent_id
+E0913 09:00:18.582499 18046 invalid_parameter_error.cc:16] error: InvalidParameterError : Error: ivp Error Message: invalid parameter  Invalid sibling ID or parent ID
+[32mjson verified[0m
+[       OK ] move_node_2007_tests.move_node_invalid_sibling_parent_id (106 ms)
+[----------] 16 tests from move_node_2007_tests (1725 ms total)
+
+[----------] 8 tests from new_char_run_2007_tests
+[ RUN      ] new_char_run_2007_tests.new_char_run_at_start_success
+[32mjson verified[0m
+[       OK ] new_char_run_2007_tests.new_char_run_at_start_success (109 ms)
+[ RUN      ] new_char_run_2007_tests.new_char_run_at_middle_success
+[32mjson verified[0m
+[       OK ] new_char_run_2007_tests.new_char_run_at_middle_success (107 ms)
+[ RUN      ] new_char_run_2007_tests.new_char_run_at_end_success
+[32mjson verified[0m
+[       OK ] new_char_run_2007_tests.new_char_run_at_end_success (108 ms)
+[ RUN      ] new_char_run_2007_tests.new_char_run_invalid_parent_node
+E0913 09:00:19.012699 18046 add_node.cc:90] AddNode: no parent
+E0913 09:00:19.013053 18046 command_base.cc:25] CommandBase: Apply failure
+E0913 09:00:19.013648 18046 transaction_manager.cc:69] TransactionManager: Unable to apply command
+E0913 09:00:19.015220 18046 unable_to_edit_error.cc:16] error: UnableToEditError : Error: ued Error Message: unable to edit  Insert Character Run operation failed
+[32mjson verified[0m
+[       OK ] new_char_run_2007_tests.new_char_run_invalid_parent_node (112 ms)
+[ RUN      ] new_char_run_2007_tests.new_char_run_invalid_parent_id
+E0913 09:00:19.125318 18046 invalid_parameter_error.cc:16] error: InvalidParameterError : Error: ivp Error Message: invalid parameter  Invalid parameter: offset
+[32mjson verified[0m
+[       OK ] new_char_run_2007_tests.new_char_run_invalid_parent_id (109 ms)
+[ RUN      ] new_char_run_2007_tests.new_char_run_invalid_sibling_node
+E0913 09:00:19.234789 18046 invalid_parameter_error.cc:16] error: InvalidParameterError : Error: ivp Error Message: invalid parameter  Invalid sibling ID or parent ID
+[32mjson verified[0m
+[       OK ] new_char_run_2007_tests.new_char_run_invalid_sibling_node (108 ms)
+[ RUN      ] new_char_run_2007_tests.new_char_run_invalid_sibling_id
+[32mjson verified[0m
+[       OK ] new_char_run_2007_tests.new_char_run_invalid_sibling_id (108 ms)
+[ RUN      ] new_char_run_2007_tests.new_char_run_invalid_sibling_parent_id
+E0913 09:00:19.451153 18046 invalid_parameter_error.cc:16] error: InvalidParameterError : Error: ivp Error Message: invalid parameter  Invalid sibling ID or parent ID
+[32mjson verified[0m
+[       OK ] new_char_run_2007_tests.new_char_run_invalid_sibling_parent_id (109 ms)
+[----------] 8 tests from new_char_run_2007_tests (871 ms total)
+
+[----------] 6 tests from new_paragraph_2007_tests
+[ RUN      ] new_paragraph_2007_tests.new_paragraph_at_start_success
+[32mjson verified[0m
+[       OK ] new_paragraph_2007_tests.new_paragraph_at_start_success (100 ms)
+[ RUN      ] new_paragraph_2007_tests.new_paragraph_at_middle_success
+[32mjson verified[0m
+[       OK ] new_paragraph_2007_tests.new_paragraph_at_middle_success (107 ms)
+[ RUN      ] new_paragraph_2007_tests.new_paragraph_at_end_success
+[32mjson verified[0m
+[       OK ] new_paragraph_2007_tests.new_paragraph_at_end_success (107 ms)
+[ RUN      ] new_paragraph_2007_tests.new_paragraph_invalid_parent_id
+E0913 09:00:19.872974 18046 add_node.cc:90] AddNode: no parent
+E0913 09:00:19.873358 18046 command_base.cc:25] CommandBase: Apply failure
+E0913 09:00:19.873960 18046 transaction_manager.cc:69] TransactionManager: Unable to apply command
+E0913 09:00:19.874655 18046 unable_to_edit_error.cc:16] error: UnableToEditError : Error: ued Error Message: unable to edit  InsertParagraph operation failed
+[32mjson verified[0m
+[       OK ] new_paragraph_2007_tests.new_paragraph_invalid_parent_id (108 ms)
+[ RUN      ] new_paragraph_2007_tests.new_paragraph_invalid_sibling_id
+E0913 09:00:19.981477 18046 invalid_parameter_error.cc:16] error: InvalidParameterError : Error: ivp Error Message: invalid parameter  Invalid sibling ID or parent ID
+[32mjson verified[0m
+[       OK ] new_paragraph_2007_tests.new_paragraph_invalid_sibling_id (106 ms)
+[ RUN      ] new_paragraph_2007_tests.new_paragraph_invalid_sibling_parent_id
+E0913 09:00:20.087527 18046 invalid_parameter_error.cc:16] error: InvalidParameterError : Error: ivp Error Message: invalid parameter  Invalid sibling ID or parent ID
+[32mjson verified[0m
+[       OK ] new_paragraph_2007_tests.new_paragraph_invalid_sibling_parent_id (105 ms)
+[----------] 6 tests from new_paragraph_2007_tests (633 ms total)
+
+[----------] 3 tests from numbered_lists_2003_tests
+[ RUN      ] numbered_lists_2003_tests.simple_numbered_lists_success
+E0913 09:00:20.189919 18046 file_system.cc:368] could not find directory entry for: /Data
+E0913 09:00:20.190481 18046 properties_iterator.cc:59] cannot read op. value: unexpected end of buffer
+E0913 09:00:20.192469 18046 section_properties_parser.cc:41] could not get next sprm
+[32mjson verified[0m
+[       OK ] numbered_lists_2003_tests.simple_numbered_lists_success (109 ms)
+[ RUN      ] numbered_lists_2003_tests.simple_numbered_lists_multilevel_success
+E0913 09:00:20.298552 18046 file_system.cc:368] could not find directory entry for: /Data
+E0913 09:00:20.299170 18046 properties_iterator.cc:59] cannot read op. value: unexpected end of buffer
+E0913 09:00:20.299725 18046 section_properties_parser.cc:41] could not get next sprm
+[32mjson verified[0m
+[       OK ] numbered_lists_2003_tests.simple_numbered_lists_multilevel_success (108 ms)
+[ RUN      ] numbered_lists_2003_tests.different_starting_values_success
+E0913 09:00:20.406852 18046 file_system.cc:368] could not find directory entry for: /Data
+E0913 09:00:20.407379 18046 properties_iterator.cc:59] cannot read op. value: unexpected end of buffer
+E0913 09:00:20.407846 18046 section_properties_parser.cc:41] could not get next sprm
+[32mjson verified[0m
+[       OK ] numbered_lists_2003_tests.different_starting_values_success (110 ms)
+[----------] 3 tests from numbered_lists_2003_tests (327 ms total)
+
+[----------] 4 tests from numbered_lists_2007_tests
+[ RUN      ] numbered_lists_2007_tests.simple_numbered_lists_success
+[32mjson verified[0m
+[       OK ] numbered_lists_2007_tests.simple_numbered_lists_success (108 ms)
+[ RUN      ] numbered_lists_2007_tests.simple_numbered_lists_multilevel_success
+[32mjson verified[0m
+[       OK ] numbered_lists_2007_tests.simple_numbered_lists_multilevel_success (105 ms)
+[ RUN      ] numbered_lists_2007_tests.different_starting_values_success
+[32mjson verified[0m
+[       OK ] numbered_lists_2007_tests.different_starting_values_success (111 ms)
+[ RUN      ] numbered_lists_2007_tests.no_list_formats_success
+cannot load: ../../../../test-files/integ-test/word/json/numbered_lists_2007/numbered_lists_2007.no_list_formats_success.response.json
+src/dcp/integ-test/framework/validate_dcp_response.cc:42: Failure
+Value of: valid_response
+  Actual: false
+Expected: true
+[  FAILED  ] numbered_lists_2007_tests.no_list_formats_success (109 ms)
+[----------] 4 tests from numbered_lists_2007_tests (433 ms total)
+
+[----------] 2 tests from replace_text_2007_tests
+[ RUN      ] replace_text_2007_tests.replace_text_success
+[32mjson verified[0m
+checking child: 21
+checking child: 20
+checking child: 21
+checking child: 20
+[       OK ] replace_text_2007_tests.replace_text_success (105 ms)
+[ RUN      ] replace_text_2007_tests.replace_text_invalid_node
+E0913 09:00:21.056763 18046 replace_text.cc:43] ReplaceText: node not found 997
+E0913 09:00:21.057168 18046 command_base.cc:25] CommandBase: Apply failure
+E0913 09:00:21.059226 18046 transaction_manager.cc:69] TransactionManager: Unable to apply command
+E0913 09:00:21.059838 18046 unable_to_edit_error.cc:16] error: UnableToEditError : Error: ued Error Message: unable to edit  Replace text failed
+[32mjson verified[0m
+[       OK ] replace_text_2007_tests.replace_text_invalid_node (106 ms)
+[----------] 2 tests from replace_text_2007_tests (211 ms total)
+
+[----------] 6 tests from section_properties_2003_tests
+[ RUN      ] section_properties_2003_tests.section_with_two_columns_success
+E0913 09:00:21.160533 18046 file_system.cc:368] could not find directory entry for: /Data
+E0913 09:00:21.161000 18046 properties_iterator.cc:59] cannot read op. value: unexpected end of buffer
+E0913 09:00:21.163219 18046 section_properties_parser.cc:41] could not get next sprm
+[32mjson verified[0m
+[       OK ] section_properties_2003_tests.section_with_two_columns_success (110 ms)
+[ RUN      ] section_properties_2003_tests.different_page_size_success
+E0913 09:00:21.269783 18046 file_system.cc:368] could not find directory entry for: /Data
+E0913 09:00:21.270215 18046 properties_iterator.cc:59] cannot read op. value: unexpected end of buffer
+E0913 09:00:21.270704 18046 section_properties_parser.cc:41] could not get next sprm
+[32mjson verified[0m
+[       OK ] section_properties_2003_tests.different_page_size_success (104 ms)
+[ RUN      ] section_properties_2003_tests.different_section_margins_success
+E0913 09:00:21.374584 18046 file_system.cc:368] could not find directory entry for: /Data
+E0913 09:00:21.375010 18046 properties_iterator.cc:59] cannot read op. value: unexpected end of buffer
+E0913 09:00:21.375582 18046 section_properties_parser.cc:41] could not get next sprm
+[32mjson verified[0m
+[       OK ] section_properties_2003_tests.different_section_margins_success (107 ms)
+[ RUN      ] section_properties_2003_tests.landscape_orientation_success
+E0913 09:00:21.481699 18046 file_system.cc:368] could not find directory entry for: /Data
+E0913 09:00:21.482341 18046 properties_iterator.cc:59] cannot read op. value: unexpected end of buffer
+E0913 09:00:21.482795 18046 section_properties_parser.cc:41] could not get next sprm
+[32mjson verified[0m
+[       OK ] section_properties_2003_tests.landscape_orientation_success (104 ms)
+[ RUN      ] section_properties_2003_tests.default_section_properties_success
+E0913 09:00:21.586535 18046 file_system.cc:368] could not find directory entry for: /Data
+E0913 09:00:21.586994 18046 properties_iterator.cc:59] cannot read op. value: unexpected end of buffer
+E0913 09:00:21.587700 18046 section_properties_parser.cc:41] could not get next sprm
+[32mjson verified[0m
+[       OK ] section_properties_2003_tests.default_section_properties_success (105 ms)
+[ RUN      ] section_properties_2003_tests.negative_section_properties_success
+E0913 09:00:21.690950 18046 file_system.cc:368] could not find directory entry for: /Data
+E0913 09:00:21.691413 18046 properties_iterator.cc:59] cannot read op. value: unexpected end of buffer
+E0913 09:00:21.691898 18046 section_properties_parser.cc:41] could not get next sprm
+E0913 09:00:21.692512 18046 stsh.cc:43] could not load LPStd at index: 12
+E0913 09:00:21.693073 18046 file.cc:376] could not load Stsh
+[32mjson verified[0m
+[       OK ] section_properties_2003_tests.negative_section_properties_success (105 ms)
+[----------] 6 tests from section_properties_2003_tests (636 ms total)
+
+[----------] 6 tests from section_properties_2007_tests
+[ RUN      ] section_properties_2007_tests.section_with_two_columns_success
+[32mjson verified[0m
+[       OK ] section_properties_2007_tests.section_with_two_columns_success (119 ms)
+[ RUN      ] section_properties_2007_tests.different_page_size_success
+[32mjson verified[0m
+[       OK ] section_properties_2007_tests.different_page_size_success (106 ms)
+[ RUN      ] section_properties_2007_tests.different_section_margins_success
+[32mjson verified[0m
+[       OK ] section_properties_2007_tests.different_section_margins_success (105 ms)
+[ RUN      ] section_properties_2007_tests.landscape_orientation_success
+[32mjson verified[0m
+[       OK ] section_properties_2007_tests.landscape_orientation_success (105 ms)
+[ RUN      ] section_properties_2007_tests.default_section_properties_success
+[32mjson verified[0m
+[       OK ] section_properties_2007_tests.default_section_properties_success (107 ms)
+[ RUN      ] section_properties_2007_tests.section_break_continuous_success
+cannot load: ../../../../test-files/integ-test/word/json/section_properties_2007_tests/section_properties_2007_tests.section_break_continuous_success.response.json.dcp
+src/dcp/integ-test/framework/validate_dcp_response.cc:42: Failure
+Value of: valid_response
+  Actual: false
+Expected: true
+[  FAILED  ] section_properties_2007_tests.section_break_continuous_success (108 ms)
+[----------] 6 tests from section_properties_2007_tests (651 ms total)
+
+[----------] 45 tests from set_formatting_tests
+[ RUN      ] set_formatting_tests.set_bold
+[32mjson verified[0m
+checking child: 25
+checking child: 25
+[       OK ] set_formatting_tests.set_bold (105 ms)
+[ RUN      ] set_formatting_tests.set_bold_invalid
+E0913 09:00:22.555814 18046 transaction_manager.cc:69] TransactionManager: Unable to apply command
+[32mjson verified[0m
+checking child: 25
+[       OK ] set_formatting_tests.set_bold_invalid (106 ms)
+[ RUN      ] set_formatting_tests.set_bold_invalid_already_set
+E0913 09:00:22.661489 18046 change_format.cc:115] PropertyStateIsValid: Failed add check!
+E0913 09:00:22.661864 18046 change_format.cc:76] ChangeFormat: Property state invalid: 20
+E0913 09:00:22.662389 18046 transaction_manager.cc:69] TransactionManager: Unable to apply command
+[32mjson verified[0m
+checking child: 22
+[       OK ] set_formatting_tests.set_bold_invalid_already_set (107 ms)
+[ RUN      ] set_formatting_tests.set_italic
+[32mjson verified[0m
+checking child: 25
+checking child: 25
+[       OK ] set_formatting_tests.set_italic (106 ms)
+[ RUN      ] set_formatting_tests.set_underline
+[32mjson verified[0m
+checking child: 25
+checking child: 25
+[       OK ] set_formatting_tests.set_underline (106 ms)
+[ RUN      ] set_formatting_tests.set_underline_style
+[32mjson verified[0m
+checking child: 25
+checking child: 25
+[       OK ] set_formatting_tests.set_underline_style (108 ms)
+[ RUN      ] set_formatting_tests.set_strikethrough
+[32mjson verified[0m
+checking child: 25
+checking child: 25
+[       OK ] set_formatting_tests.set_strikethrough (106 ms)
+[ RUN      ] set_formatting_tests.set_double_strikethrough
+[32mjson verified[0m
+checking child: 25
+checking child: 25
+[       OK ] set_formatting_tests.set_double_strikethrough (105 ms)
+[ RUN      ] set_formatting_tests.set_hidden
+[32mjson verified[0m
+checking child: 25
+checking child: 25
+[       OK ] set_formatting_tests.set_hidden (109 ms)
+[ RUN      ] set_formatting_tests.set_subscript
+[32mjson verified[0m
+checking child: 25
+checking child: 25
+[       OK ] set_formatting_tests.set_subscript (106 ms)
+[ RUN      ] set_formatting_tests.set_superscript
+[32mjson verified[0m
+checking child: 25
+checking child: 25
+[       OK ] set_formatting_tests.set_superscript (107 ms)
+[ RUN      ] set_formatting_tests.set_all_caps
+[32mjson verified[0m
+checking child: 25
+checking child: 25
+[       OK ] set_formatting_tests.set_all_caps (106 ms)
+[ RUN      ] set_formatting_tests.set_small_caps
+[32mjson verified[0m
+checking child: 25
+checking child: 25
+[       OK ] set_formatting_tests.set_small_caps (107 ms)
+[ RUN      ] set_formatting_tests.set_font_face
+[32mjson verified[0m
+checking child: 25
+checking child: 25
+[       OK ] set_formatting_tests.set_font_face (106 ms)
+[ RUN      ] set_formatting_tests.set_font_size
+[32mjson verified[0m
+checking child: 25
+checking child: 25
+[       OK ] set_formatting_tests.set_font_size (106 ms)
+[ RUN      ] set_formatting_tests.set_font_colour
+[32mjson verified[0m
+checking child: 25
+checking child: 25
+[       OK ] set_formatting_tests.set_font_colour (106 ms)
+[ RUN      ] set_formatting_tests.set_background_colour
+[32mjson verified[0m
+checking child: 25
+checking child: 25
+[       OK ] set_formatting_tests.set_background_colour (106 ms)
+[ RUN      ] set_formatting_tests.set_emboss
+[32mjson verified[0m
+checking child: 25
+checking child: 25
+[       OK ] set_formatting_tests.set_emboss (106 ms)
+[ RUN      ] set_formatting_tests.set_engrave
+[32mjson verified[0m
+checking child: 25
+checking child: 25
+[       OK ] set_formatting_tests.set_engrave (105 ms)
+[ RUN      ] set_formatting_tests.set_outline
+[32mjson verified[0m
+checking child: 25
+checking child: 25
+[       OK ] set_formatting_tests.set_outline (105 ms)
+[ RUN      ] set_formatting_tests.set_paragraph_style
+[32mjson verified[0m
+checking child: 25
+checking child: 25
+[       OK ] set_formatting_tests.set_paragraph_style (107 ms)
+[ RUN      ] set_formatting_tests.set_shadow
+[32mjson verified[0m
+checking child: 25
+checking child: 25
+[       OK ] set_formatting_tests.set_shadow (105 ms)
+[ RUN      ] set_formatting_tests.set_combined
+[32mjson verified[0m
+checking child: 25
+checking child: 25
+[       OK ] set_formatting_tests.set_combined (106 ms)
+[ RUN      ] set_formatting_tests.remove_bold
+[32mjson verified[0m
+checking child: 22
+checking child: 22
+[       OK ] set_formatting_tests.remove_bold (107 ms)
+[ RUN      ] set_formatting_tests.remove_bold_invalid
+E0913 09:00:24.999764 18046 invalid_parameter_error.cc:16] error: InvalidParameterError : Error: ivp Error Message: invalid parameter  Invalid parameter: remove_formatting_array_dcp
+[32mjson verified[0m
+checking child: 22
+[       OK ] set_formatting_tests.remove_bold_invalid (106 ms)
+[ RUN      ] set_formatting_tests.remove_bold_invalid_node
+E0913 09:00:25.105762 18046 change_format.cc:82] ChangeFormat: node not found 999
+E0913 09:00:25.106142 18046 transaction_manager.cc:69] TransactionManager: Unable to apply command
+[32mjson verified[0m
+[       OK ] set_formatting_tests.remove_bold_invalid_node (106 ms)
+[ RUN      ] set_formatting_tests.remove_bold_invalid_property_not_set
+E0913 09:00:25.211827 18046 change_format.cc:128] PropertyStateIsValid: Failed NULL props check for removing!
+E0913 09:00:25.212204 18046 change_format.cc:76] ChangeFormat: Property state invalid: 20
+E0913 09:00:25.212859 18046 transaction_manager.cc:69] TransactionManager: Unable to apply command
+[32mjson verified[0m
+checking child: 25
+[       OK ] set_formatting_tests.remove_bold_invalid_property_not_set (108 ms)
+[ RUN      ] set_formatting_tests.remove_italic
+[32mjson verified[0m
+checking child: 22
+checking child: 22
+[       OK ] set_formatting_tests.remove_italic (109 ms)
+[ RUN      ] set_formatting_tests.remove_underline
+[32mjson verified[0m
+checking child: 22
+checking child: 22
+[       OK ] set_formatting_tests.remove_underline (107 ms)
+[ RUN      ] set_formatting_tests.remove_strikethrough
+[32mjson verified[0m
+checking child: 22
+checking child: 22
+[       OK ] set_formatting_tests.remove_strikethrough (107 ms)
+[ RUN      ] set_formatting_tests.remove_double_strikethrough
+[32mjson verified[0m
+checking child: 22
+checking child: 22
+[       OK ] set_formatting_tests.remove_double_strikethrough (107 ms)
+[ RUN      ] set_formatting_tests.remove_hidden
+[32mjson verified[0m
+[       OK ] set_formatting_tests.remove_hidden (109 ms)
+[ RUN      ] set_formatting_tests.remove_subscript
+[32mjson verified[0m
+checking child: 24
+checking child: 24
+[       OK ] set_formatting_tests.remove_subscript (110 ms)
+[ RUN      ] set_formatting_tests.remove_superscript
+[32mjson verified[0m
+checking child: 24
+checking child: 24
+[       OK ] set_formatting_tests.remove_superscript (112 ms)
+[ RUN      ] set_formatting_tests.remove_all_caps
+[32mjson verified[0m
+checking child: 22
+checking child: 22
+[       OK ] set_formatting_tests.remove_all_caps (113 ms)
+[ RUN      ] set_formatting_tests.remove_small_caps
+[32mjson verified[0m
+checking child: 22
+checking child: 22
+[       OK ] set_formatting_tests.remove_small_caps (111 ms)
+[ RUN      ] set_formatting_tests.remove_font_face
+[32mjson verified[0m
+[       OK ] set_formatting_tests.remove_font_face (112 ms)
+[ RUN      ] set_formatting_tests.remove_font_size
+[32mjson verified[0m
+[       OK ] set_formatting_tests.remove_font_size (112 ms)
+[ RUN      ] set_formatting_tests.remove_font_colour
+[32mjson verified[0m
+checking child: 25
+checking child: 25
+[       OK ] set_formatting_tests.remove_font_colour (111 ms)
+[ RUN      ] set_formatting_tests.remove_background_colour
+[32mjson verified[0m
+[       OK ] set_formatting_tests.remove_background_colour (112 ms)
+[ RUN      ] set_formatting_tests.remove_emboss
+[32mjson verified[0m
+checking child: 24
+checking child: 24
+[       OK ] set_formatting_tests.remove_emboss (112 ms)
+[ RUN      ] set_formatting_tests.remove_engrave
+[32mjson verified[0m
+checking child: 24
+checking child: 24
+[       OK ] set_formatting_tests.remove_engrave (111 ms)
+[ RUN      ] set_formatting_tests.remove_outline
+[32mjson verified[0m
+checking child: 24
+checking child: 24
+[       OK ] set_formatting_tests.remove_outline (113 ms)
+[ RUN      ] set_formatting_tests.remove_shadow
+[32mjson verified[0m
+checking child: 25
+checking child: 25
+[       OK ] set_formatting_tests.remove_shadow (111 ms)
+[ RUN      ] set_formatting_tests.remove_combined
+[32mjson verified[0m
+checking child: 25
+checking child: 25
+[       OK ] set_formatting_tests.remove_combined (113 ms)
+[----------] 45 tests from set_formatting_tests (4862 ms total)
+
+[----------] 2 tests from tab_characters_2003_tests
+[ RUN      ] tab_characters_2003_tests.main_body_success
+E0913 09:00:27.309456 18046 file_system.cc:368] could not find directory entry for: /Data
+E0913 09:00:27.309934 18046 properties_iterator.cc:59] cannot read op. value: unexpected end of buffer
+E0913 09:00:27.310446 18046 section_properties_parser.cc:41] could not get next sprm
+[32mjson verified[0m
+[       OK ] tab_characters_2003_tests.main_body_success (114 ms)
+[ RUN      ] tab_characters_2003_tests.header_footer_success
+E0913 09:00:27.424053 18046 file_system.cc:368] could not find directory entry for: /Data
+E0913 09:00:27.424602 18046 properties_iterator.cc:59] cannot read op. value: unexpected end of buffer
+E0913 09:00:27.425006 18046 section_properties_parser.cc:41] could not get next sprm
+E0913 09:00:27.425644 18046 record_factory.cc:62] unsupported record type: 61726
+E0913 09:00:27.426157 18046 record_container.cc:51] DggContainer: unsupported record type: 61726
+E0913 09:00:27.426753 18046 record_container.cc:53] DggContainer: creating a unsupported record instead
+E0913 09:00:27.427352 18046 record_factory.cc:62] unsupported record type: 61448
+E0913 09:00:27.428225 18046 record_container.cc:51] DgContainer: unsupported record type: 61448
+E0913 09:00:27.428750 18046 record_container.cc:53] DgContainer: creating a unsupported record instead
+E0913 09:00:27.429322 18046 record_factory.cc:62] unsupported record type: 61449
+E0913 09:00:27.429821 18046 record_container.cc:51] SpContainer: unsupported record type: 61449
+E0913 09:00:27.430326 18046 record_container.cc:53] SpContainer: creating a unsupported record instead
+E0913 09:00:27.430886 18046 record_factory.cc:62] unsupported record type: 61457
+E0913 09:00:27.431339 18046 record_container.cc:51] SpContainer: unsupported record type: 61457
+E0913 09:00:27.431861 18046 record_container.cc:53] SpContainer: creating a unsupported record instead
+[32mjson verified[0m
+[       OK ] tab_characters_2003_tests.header_footer_success (123 ms)
+[----------] 2 tests from tab_characters_2003_tests (238 ms total)
+
+[----------] 2 tests from tab_characters_2007_tests
+[ RUN      ] tab_characters_2007_tests.main_body_success
+[32mjson verified[0m
+checking child: 36
+checking child: 35
+[       OK ] tab_characters_2007_tests.main_body_success (113 ms)
+[ RUN      ] tab_characters_2007_tests.header_footer_success
+[32mjson verified[0m
+checking child: 49
+checking child: 48
+[       OK ] tab_characters_2007_tests.header_footer_success (118 ms)
+[----------] 2 tests from tab_characters_2007_tests (231 ms total)
+
+[----------] 9 tests from tables_2003_tests
+[ RUN      ] tables_2003_tests.simple_table_2x3_success
+E0913 09:00:27.778543 18046 properties_iterator.cc:59] cannot read op. value: unexpected end of buffer
+E0913 09:00:27.778956 18046 section_properties_parser.cc:41] could not get next sprm
+E0913 09:00:27.779584 18046 record_factory.cc:62] unsupported record type: 61726
+E0913 09:00:27.780117 18046 record_container.cc:51] DggContainer: unsupported record type: 61726
+E0913 09:00:27.780781 18046 record_container.cc:53] DggContainer: creating a unsupported record instead
+E0913 09:00:27.783296 18046 record_factory.cc:62] unsupported record type: 61448
+E0913 09:00:27.784412 18046 record_container.cc:51] DgContainer: unsupported record type: 61448
+E0913 09:00:27.785017 18046 record_container.cc:53] DgContainer: creating a unsupported record instead
+E0913 09:00:27.785619 18046 record_factory.cc:62] unsupported record type: 61449
+E0913 09:00:27.787304 18046 record_container.cc:51] SpContainer: unsupported record type: 61449
+E0913 09:00:27.787892 18046 record_container.cc:53] SpContainer: creating a unsupported record instead
+E0913 09:00:27.788503 18046 record_factory.cc:62] unsupported record type: 61457
+E0913 09:00:27.789077 18046 record_container.cc:51] SpContainer: unsupported record type: 61457
+E0913 09:00:27.789652 18046 record_container.cc:53] SpContainer: creating a unsupported record instead
+[32mjson verified[0m
+[       OK ] tables_2003_tests.simple_table_2x3_success (139 ms)
+[ RUN      ] tables_2003_tests.simple_table_5x8_success
+E0913 09:00:27.919172 18046 properties_iterator.cc:59] cannot read op. value: unexpected end of buffer
+E0913 09:00:27.919585 18046 section_properties_parser.cc:41] could not get next sprm
+[32mjson verified[0m
+[       OK ] tables_2003_tests.simple_table_5x8_success (231 ms)
+[ RUN      ] tables_2003_tests.cell_content_alignment_success
+E0913 09:00:28.148870 18046 properties_iterator.cc:59] cannot read op. value: unexpected end of buffer
+E0913 09:00:28.149227 18046 section_properties_parser.cc:41] could not get next sprm
+[32mjson verified[0m
+[       OK ] tables_2003_tests.cell_content_alignment_success (154 ms)
+[ RUN      ] tables_2003_tests.cell_background_colour_success
+E0913 09:00:28.302830 18046 properties_iterator.cc:59] cannot read op. value: unexpected end of buffer
+E0913 09:00:28.303256 18046 section_properties_parser.cc:41] could not get next sprm
+[32mjson verified[0m
+[       OK ] tables_2003_tests.cell_background_colour_success (131 ms)
+[ RUN      ] tables_2003_tests.formatted_text_within_cells_success
+E0913 09:00:28.434532 18046 properties_iterator.cc:59] cannot read op. value: unexpected end of buffer
+E0913 09:00:28.434954 18046 section_properties_parser.cc:41] could not get next sprm
+[32mjson verified[0m
+[       OK ] tables_2003_tests.formatted_text_within_cells_success (165 ms)
+[ RUN      ] tables_2003_tests.horizontal_cell_merges_success
+E0913 09:00:28.599200 18046 properties_iterator.cc:59] cannot read op. value: unexpected end of buffer
+E0913 09:00:28.599573 18046 section_properties_parser.cc:41] could not get next sprm
+[32mjson verified[0m
+[       OK ] tables_2003_tests.horizontal_cell_merges_success (158 ms)
+[ RUN      ] tables_2003_tests.vertical_cell_merges_success
+E0913 09:00:28.757971 18046 properties_iterator.cc:59] cannot read op. value: unexpected end of buffer
+E0913 09:00:28.758347 18046 section_properties_parser.cc:41] could not get next sprm
+[32mjson verified[0m
+[       OK ] tables_2003_tests.vertical_cell_merges_success (173 ms)
+[ RUN      ] tables_2003_tests.horizontal_and_vertical_cell_merges_success
+E0913 09:00:28.931926 18046 properties_iterator.cc:59] cannot read op. value: unexpected end of buffer
+E0913 09:00:28.932365 18046 section_properties_parser.cc:41] could not get next sprm
+[32mjson verified[0m
+[       OK ] tables_2003_tests.horizontal_and_vertical_cell_merges_success (231 ms)
+[ RUN      ] tables_2003_tests.row_height_success
+E0913 09:00:29.161711 18046 file_system.cc:368] could not find directory entry for: /Data
+E0913 09:00:29.162562 18046 properties_iterator.cc:47] cannot read SPRM value: unexpected end of buffer
+E0913 09:00:29.163023 18046 section_properties_parser.cc:41] could not get next sprm
+[32mjson verified[0m
+[       OK ] tables_2003_tests.row_height_success (131 ms)
+[----------] 9 tests from tables_2003_tests (1513 ms total)
+
+[----------] 10 tests from tables_2007_tests
+[ RUN      ] tables_2007_tests.cell_background_colour_success
+[32mjson verified[0m
+[       OK ] tables_2007_tests.cell_background_colour_success (118 ms)
+[ RUN      ] tables_2007_tests.cell_borders_success
+[32mjson verified[0m
+[       OK ] tables_2007_tests.cell_borders_success (127 ms)
+[ RUN      ] tables_2007_tests.cell_content_alignment_success
+[32mjson verified[0m
+[       OK ] tables_2007_tests.cell_content_alignment_success (118 ms)
+[ RUN      ] tables_2007_tests.character_formatting_success
+[32mjson verified[0m
+[       OK ] tables_2007_tests.character_formatting_success (115 ms)
+[ RUN      ] tables_2007_tests.paragraph_alignment_success
+[32mjson verified[0m
+[       OK ] tables_2007_tests.paragraph_alignment_success (114 ms)
+[ RUN      ] tables_2007_tests.simple_table_2x3_success
+[32mjson verified[0m
+[       OK ] tables_2007_tests.simple_table_2x3_success (117 ms)
+[ RUN      ] tables_2007_tests.simple_table_5x8_success
+[32mjson verified[0m
+[       OK ] tables_2007_tests.simple_table_5x8_success (127 ms)
+[ RUN      ] tables_2007_tests.horizontal_cell_merges_success
+[32mjson verified[0m
+[       OK ] tables_2007_tests.horizontal_cell_merges_success (122 ms)
+[ RUN      ] tables_2007_tests.vertical_cell_merges_success
+[32mjson verified[0m
+[       OK ] tables_2007_tests.vertical_cell_merges_success (122 ms)
+[ RUN      ] tables_2007_tests.horizontal_and_vertical_cell_merges_success
+[32mjson verified[0m
+[       OK ] tables_2007_tests.horizontal_and_vertical_cell_merges_success (143 ms)
+[----------] 10 tests from tables_2007_tests (1223 ms total)
+
+[----------] 4 tests from simple_field_2007_tests
+[ RUN      ] simple_field_2007_tests.supported_field_date_success
+[32mjson verified[0m
+checking child: 28
+checking child: 27
+[       OK ] simple_field_2007_tests.supported_field_date_success (114 ms)
+[ RUN      ] simple_field_2007_tests.supported_field_time_success
+[32mjson verified[0m
+checking child: 28
+checking child: 27
+[       OK ] simple_field_2007_tests.supported_field_time_success (114 ms)
+[ RUN      ] simple_field_2007_tests.supported_field_page_success
+[32mjson verified[0m
+[       OK ] simple_field_2007_tests.supported_field_page_success (115 ms)
+[ RUN      ] simple_field_2007_tests.unsupported_field_author_success
+[32mjson verified[0m
+checking child: 26
+checking child: 25
+[       OK ] simple_field_2007_tests.unsupported_field_author_success (114 ms)
+[----------] 4 tests from simple_field_2007_tests (458 ms total)
+
+[----------] Global test environment tear-down
+[==========] 241 tests from 39 test cases ran. (28124 ms total)
+[  PASSED  ] 224 tests.
+[  FAILED  ] 17 tests, listed below:
+[  FAILED  ] basic_text_formatting_2003_tests.gdc_different_paragraph_first_line_indentation_request_success
+[  FAILED  ] basic_text_formatting_2003_tests.gdc_different_paragraph_hanging_indentation_request_success
+[  FAILED  ] basic_text_formatting_2003_tests.gdc_different_paragraph_left_right_indentation_request_success
+[  FAILED  ] breaks_2003_tests.line_break_success
+[  FAILED  ] breaks_2007_tests.line_break_success
+[  FAILED  ] character_run_formatting_2007_tests.all_examples_success
+[  FAILED  ] get_document_content_2007_tests.get_document_content_barcelona_success
+[  FAILED  ] get_document_content_2007_tests.get_document_content_oxford_guide_success
+[  FAILED  ] headers_and_footers_2007_tests.multiple_sections_default_header_success
+[  FAILED  ] headers_and_footers_2007_tests.multiple_sections_default_footer_success
+[  FAILED  ] headers_and_footers_2007_tests.multiple_sections_different_first_odd_even_success
+[  FAILED  ] images_2003_tests.different_cropping_values_success
+[  FAILED  ] paragraph_properties_2007_tests.indenting_success
+[  FAILED  ] paragraph_properties_2007_tests.line_spacing_success
+[  FAILED  ] paragraph_properties_2007_tests.space_before_after_success
+[  FAILED  ] numbered_lists_2007_tests.no_list_formats_success
+[  FAILED  ] section_properties_2007_tests.section_break_continuous_success
+
+17 FAILED TESTS
