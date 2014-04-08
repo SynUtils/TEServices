@@ -5,9 +5,6 @@ from django.db import models
 
 class DocumentForm(forms.Form):
 
-    docfile = forms.FileField(
-         label='', show_hidden_initial='none',required=True,
-
-)
-
+    docfile = forms.FileField(label='', show_hidden_initial='none',required=True,)
+    compare_build = forms.FileField(label='', show_hidden_initial='none',required=True,)
 

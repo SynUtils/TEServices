@@ -1,4 +1,3 @@
-# Create your views here.
 from django.http import HttpResponse
 from django.shortcuts import get_object_or_404, render
 from TEServices.forms import DocumentForm
@@ -119,17 +118,20 @@ def jenkins1(request):
         print " I am in jenkins1 IF"
         form = DocumentForm(request.POST, request.FILES)
         if form.is_valid():
-
             newdoc = Document(docfile = request.FILES['docfile'])
             newdoc.save()
             print newdoc.docfile.file
             print newdoc.docfile.size
-#             scp1= commands.getoutput('scp /Users/sheetalh/PycharmProjects/TEServices/TEServices/sheetal/documents/2014/03/26/* sheetalh@172.24.212.122:~/Desktop/UploadedCRX')
+    #             scp1= commands.getoutput('scp /Users/sheetalh/PycharmProjects/TEServices/TEServices/sheetal/documents/2014/03/26/* sheetalh@172.24.212.122:~/Desktop/UploadedCRX')
             print " calling SCP to Remotely upload doc...document is saving in progress....."
             #flush the CRX after Uploading on the Server
-           # shutil.rmtree('/Users/sheetalh/PycharmProjects/TEServices/TEServices/sheetal/documents/2014/03/18/')
-
-        # Redirect to the document list after POST
+            # shutil.rmtree('/Users/sheetalh/PycharmProjects/TEServices/TEServices/sheetal/documents/2014/03/18/')
+    
+            # Redirect to the document list after POST
+            if request.FILES.has_key('compare_build'):
+                new_compare_build = Document(compare_build = request.FILES['compare_build'])
+                new_compare_build.save()
+                print 'Compare build: ', new_compare_build.compare_build.file
 
     else:
         form = DocumentForm() # A empty, unbound form
