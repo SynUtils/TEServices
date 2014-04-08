@@ -1,6 +1,0 @@
-baseBuild:/Users/sheetalh/Documents/samplegitproject/html-office/crx
-newBuild:/Users/sheetalh/Documents/samplegitproject/html-office/crx
-rootDir:/Users/sheetalh/Documents/samplegitproject/Git
-msImageDir:/Users/sheetalh/Documents/samplegitproject/Git/msImages
-baseImageDir:/Users/sheetalh/Documents/samplegitproject/Git/blessedImages
-testFilesDir:/Users/sheetalh/Documents/samplegitproject/Git/data

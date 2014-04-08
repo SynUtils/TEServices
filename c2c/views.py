@@ -1,4 +1,3 @@
-# Create your views here.
 from django.http import HttpResponse
 from django.shortcuts import get_object_or_404, render
 from TEServices.forms import DocumentForm
@@ -10,10 +9,16 @@ from django.forms import fields
 from django.template import Context, loader
 from django.core.context_processors import csrf
 import subprocess
-import commands
+# import commands
 import shutil
+from syn_util import properties
+# from syn_util import job
+
 
 # Business Logic for Running FET/curl/scp commands to Upload Test data on Jenkins through FET
+p = properties.Properties(r'config/TEServices.properties')
+prop = p.load()  
+
 def runFET(request):
 
     f1=request.GET.get('c1')
@@ -37,27 +42,31 @@ def runFET(request):
         f1="pptx";
 
 
-    if f1!=None:
+    if f1!= None:
         #Calling "Curl" command to get "Test data through 'FET"tool
-        cmd=commands.getoutput('curl -v -L -G -d "c1='+f1+'&c2='+featurename+'&c3='+filecount+'&c4=1&c5='+datetime+'" http://172.24.212.56//callperl.php')
-        print cmd
+        subprocess.call(['curl', '-v', '-L', '-G', '-d',
+                     'c1='+ str(f1) +'&c2='+ str(featurename) +'&c3='+ 
+                     str(filecount) +'&c4='+ '1' +'&c5='+ str(datetime),
+                     prop['FET_URL']])
+        
+#         
         print "after calling curl"
 
         #Calling "wget" to download files requested by "Curl" command through "FET" Tool
-        get=commands.getoutput('wget http://172.24.212.56//Final//Zip//'+featurename+'_'+datetime+'.zip')
-#         print get
+        subprocess.call(['wget', prop['FET_DOWNLOAD_URL']
+                             + str(featurename) + '_' + str(datetime) + '.zip', '-P', '/tmp/'])
+        
+        
 
-        #Calling "scp" to Upload Test data on Jenkins Server derived from "wget"
-        scp2=commands.getoutput('scp  /Users/sheetalh/PycharmProjects/TEServices/*.zip sheetalh@172.24.212.122:~/Desktop/crx')
-
-#         print scp2
 
         # running job.py
         print "running python dcript"
-        command = "sudo python /Users/sheetalh/Downloads/job.py"
-        c1=commands.getoutput('command')
+        
+#         subprocess.call(['sudo python', prop['JENKINS_JOB_RUNNER']])
+#         command = "sudo python /Users/sheetalh/Downloads/job.py"
+#         c1=commands.getoutput('command')
         print "after running the command"
-        subprocess.call(command, shell=True)
+#         subprocess.call(command, shell=True)
 
 #     id1=request.GET.get('id1')
 #     if id1 != str(1):
@@ -109,17 +118,20 @@ def jenkins1(request):
         print " I am in jenkins1 IF"
         form = DocumentForm(request.POST, request.FILES)
         if form.is_valid():
-
             newdoc = Document(docfile = request.FILES['docfile'])
             newdoc.save()
             print newdoc.docfile.file
             print newdoc.docfile.size
-            scp1= commands.getoutput('scp /Users/sheetalh/PycharmProjects/TEServices/TEServices/sheetal/documents/2014/03/26/* sheetalh@172.24.212.122:~/Desktop/UploadedCRX')
+    #             scp1= commands.getoutput('scp /Users/sheetalh/PycharmProjects/TEServices/TEServices/sheetal/documents/2014/03/26/* sheetalh@172.24.212.122:~/Desktop/UploadedCRX')
             print " calling SCP to Remotely upload doc...document is saving in progress....."
             #flush the CRX after Uploading on the Server
-           # shutil.rmtree('/Users/sheetalh/PycharmProjects/TEServices/TEServices/sheetal/documents/2014/03/18/')
-
-        # Redirect to the document list after POST
+            # shutil.rmtree('/Users/sheetalh/PycharmProjects/TEServices/TEServices/sheetal/documents/2014/03/18/')
+    
+            # Redirect to the document list after POST
+            if request.FILES.has_key('compare_build'):
+                new_compare_build = Document(compare_build = request.FILES['compare_build'])
+                new_compare_build.save()
+                print 'Compare build: ', new_compare_build.compare_build.file
 
     else:
         form = DocumentForm() # A empty, unbound form
@@ -132,5 +144,5 @@ def jenkins1(request):
     return render_to_response(
      'hello.html',
     {'documents':documents,'form':form},
-    context_instance=RequestContext(request)
+    context_instance = RequestContext(request)
     )
