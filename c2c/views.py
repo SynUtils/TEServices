@@ -18,7 +18,7 @@ from datetime import datetime
 
 
 # Business Logic for Running FET/curl/scp commands to Upload Test data on Jenkins through FET
-//p = properties.Properties(r'config/TEServices.properties')
+#p = properties.Properties(r'config/TEServices.properties')
 p = properties.Properties(r'/home/synerzip/Documents/TEServices/config/TEServices.properties')
 prop = p.load()  
 
