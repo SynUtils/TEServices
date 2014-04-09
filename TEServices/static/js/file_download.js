@@ -151,6 +151,12 @@ function isNumberKey(evt)
 
     return true;
 }
+
+function getFile(){
+    document.getElementById("uploadcrx").click();
+     alert("File is getting Uploaded....")
+}
+
 function submitForm()
 {
     getFile();
@@ -186,11 +192,24 @@ function submitForm()
         return false;
     }
 
-    location.reload();
-    queryString = "runFET?id1=1&c1="+filetype+"&c2="+SelectedFeature+"&c3="+FileCount+"&c4=default"+"&c5="+datetime;
+//    location.reload();
+//    queryString = "runFET?id1=1&c1="+filetype+"&c2="+SelectedFeature+"&c3="+FileCount+"&c4=default"+"&c5="+datetime;
     //location.reload();
      alert("Wait.....Downloading Test data...");
-    location.href='jenkins1';
-    location.href=queryString;
+//    location.href='jenkins1';
+//    location.href=queryString;
 //Write("callperl.php", queryString);
+    return true;
+}
+
+
+
+
+var myVar=setInterval(function(){myTimer()},1000);
+
+function myTimer()
+{
+    var d=new Date();
+    var t=d.toLocaleTimeString();
+    document.getElementById("demo").innerHTML=t;
 }

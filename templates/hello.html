@@ -23,7 +23,8 @@
     <p id="pid" align="center"></p>
     <img id="image" align="center" src="">
 </div>
-<FORM name="ajax" method="POST" action="" enctype="multipart/form-data" id="f1">
+<FORM name="ajax" method="POST" action="/c2c/jenkins1" enctype="multipart/form-data" id="f1">
+{% csrf_token %}
 <input type='hidden' name='csrfmiddlewaretoken' value='randomchars' />
     <table border="1" style="width:25%;" align="center" >
 
@@ -66,9 +67,6 @@
         <td> <b>C2C Automation Tool</b>    </td>
 
     </tr>
-
-
-
     <h1 align="center"> C2C Automation Run</h1>
         <tr>
 <th  style="width:20%;">Email Address</th>
@@ -104,10 +102,6 @@
     </div>
 </th>
 </tr>
-<!-- {{ form.compare_build}}
- -->
-
-
 
 <th  style="width:50%;" ></th>
         <td> <b>Run C2C</b></td>
@@ -116,9 +110,6 @@
         <td><input type="submit" class="btn" value="CRX Upload" onClick="" hidden="hidden"  id="uploadcrx" ></td>
         </div>
             </th>
-
-
-
 <!--displaying views.py data-->
     {% if cmd %}
         {{ cmd }}
@@ -157,9 +148,10 @@
     <tr>
 
      <tr>
-            <th colspan="2"><INPUT type="button" name="subtn" id="btnsbt" value="RUN C2C"   onclick="submitForm()" style=" background-color:limegreen" > </th>
-
-      </tr>
+            <th colspan="2">
+            <INPUT type="submit" name="subtn" id="btnsbt" value="RUN C2C" onsubmit="submitForm()" style=" background-color:limegreen" > </th>
+<!-- 	
+ -->      </tr>
 
      </p>
 </table>

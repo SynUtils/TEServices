@@ -51,7 +51,7 @@ class Properties:
            
 
 if __name__ == '__main__':
-    p = Properties(r"/Users/pavang/Projects/github/self_github/TEServices/config/TEServices.properties")
-    p.load()
-    p.print_prop()
+#     p = Properties(r"/Users/pavang/Projects/github/self_github/TEServices/config/TEServices.properties")
+#     p.load()
+#     p.print_prop()
     pass
