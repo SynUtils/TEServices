@@ -169,7 +169,7 @@ function submitForm()
     SelectedFeature = document.getElementById('comb2').value;
     FileCount = document.getElementById('filecnt').value;
     checkrandom = document.getElementsByName('random');
-
+    email_data = document.getElementById('exampleInputEmail1').value;
     //Validation For All Tools
     if (filetype=="0")
     {
