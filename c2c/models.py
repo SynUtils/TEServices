@@ -4,7 +4,8 @@ from datetime import datetime
 
 
 date_time = datetime.now().strftime("%Y%m%d%H%M%S") 
-
+print "calling Model..........................................."
 class Document(models.Model):
+    print "Document Model................................................"
     docfile = models.FileField(upload_to='documents/%Y/%m/%d/' + date_time + '/baseBuild', max_length=5234,blank=True, null=True,)
     compare_build = models.FileField(upload_to='documents/%Y/%m/%d/' + date_time + '/compareBuild', max_length=5234,blank=True, null=True,)
