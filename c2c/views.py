@@ -66,12 +66,12 @@ def jenkins1(request):
                              str(file_count) +'&c4='+ '1' +'&c5='+ str(c2c.models.date_time),
                              prop['FET_URL']])            
                 
-                print "Calling wget....."
-               
-    
-                #Calling "wget" to download files requested by "Curl" command through "FET" Tool
+        #Calling "wget" to download files requested by "Curl" command through "FET" Tool
+                print "Calling wget....."  
+                date_dir = c2c.models.date_time[:4] +"/"+ c2c.models.date_time[4:6] +"/"+ c2c.models.date_time[6:8]
+                TEST_FILES = r'/var/www/media/documents/' + date_dir + '/' +  c2c.models.date_time + '/'
                 subprocess.check_output(['wget', prop['FET_DOWNLOAD_URL']
-                                     + str(feature_name) + '_' + str(c2c.models.date_time) + '.zip', '-P', '/tmp/'])
+                                     + str(feature_name) + '_' + str(c2c.models.date_time) + '.zip', '-P', TEST_FILES])
             except:
 #                 print Exception
                 return render_to_response('exception.html', context_instance = RequestContext(request))
