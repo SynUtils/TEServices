@@ -77,7 +77,7 @@ def jenkins1(request):
                 return render_to_response('exception.html', context_instance = RequestContext(request))
                     
             # Calling Jenkins
-            jenkins_url = r'http://172.24.212.35:8080/job/paramsC2C/buildWithParameters?BaseCrxPath=' + str(BASE_BUILD_DIR) + '&CompareCrxPath=' + str(COMPARE_BUILD_DIR) + '&FilesPath=' + str(TEST_FILES) + str(feature_name) + '_' + str(c2c.models.date_time) + '.zip' + '&CopyfilesPath=' + str(TEST_FILES) + r'&EmailAddress=' + str(email_data)  
+            jenkins_url = r'http://172.24.212.35:8080/job/paramsC2C/buildWithParameters?BaseCrxPath=' + str(BASE_BUILD_DIR) + '&CompareCrxPath=' + str(COMPARE_BUILD_DIR) + '&FilesPath=' + str(TEST_FILES) + str(feature_name) + '_' + str(c2c.models.date_time) + '.zip' + '&CopyfilesPath=' + str(TEST_FILES) + r'&EmailAddress=' + str(email_data) + r'&Result=' + 'media/documents/' + date_dir + '/' +  c2c.models.date_time + '/' + 'Result/' 
             print jenkins_url
             requests.get(jenkins_url)
 
@@ -85,13 +85,15 @@ def jenkins1(request):
         form = DocumentForm()                                    # A empty, unbound form
 
 
+    date_dir = c2c.models.date_time[:4] +"/"+ c2c.models.date_time[4:6] +"/"+ c2c.models.date_time[6:8] +'/'
+    output_dir = date_dir + c2c.models.date_time + '/Result/index.html'
     # Load documents for the list page
     documents = Document.objects.all()
 
 # Render list page with the documents and the form
     return render_to_response(
      'hello.html',
-    {'documents':documents, 'form':form},
+    {'documents':documents, 'form':form, 'output':output_dir},
     context_instance = RequestContext(request)
     )
 
