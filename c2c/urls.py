@@ -6,7 +6,7 @@ urlpatterns = patterns('',
 
 #     url(r'^shital', views.indexshital),
 #     url(r'^runFET',views.runFET),
-    url(r'^jenkins1',views.jenkins1),
+    url(r'^TEServices',views.TEServices),
 #     url(r'^runpythonscript',views.runpythonscript)
 
 )

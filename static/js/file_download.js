@@ -159,6 +159,25 @@ function getFile(){
 
 function submitForm()
 {
+	var showLoadingImage = function() {
+		var contentDiv = document.getElementById('contentDiv');
+		contentDiv.style.opacity=0.5
+		contentDiv.style.zIndex=-2;
+		
+		var loadingImage = document.getElementById('loadingImage');
+		loadingImage.style.zIndex=2;
+		loadingImage.style.display='inline'
+		loadingImage.style.width='100%';
+		loadingImage.style.height='100%';
+		loadingImage.style.position='absolute';
+		loadingImage.style.top=0;
+		loadingImage.style.left=0;
+		
+	};
+	
+	showLoadingImage();
+	
+	
     getFile();
     var currentdate = new Date();
     datetime = "" + currentdate.getDate() + ""+ (currentdate.getMonth()+1)+ ""+ currentdate.getFullYear() + ""+ currentdate.getHours() +""+ currentdate.getMinutes() + "" + currentdate.getSeconds();
@@ -169,37 +188,16 @@ function submitForm()
     SelectedFeature = document.getElementById('comb2').value;
     FileCount = document.getElementById('filecnt').value;
     checkrandom = document.getElementsByName('random');
-    email_data = document.getElementById('exampleInputEmail1').value;
-    //Validation For All Tools
-    if (filetype=="0")
-    {
-        alert("Please Select FileType");
-        return false;
-    }
-    if (SelectedFeature=="-select-")
-    {
-        alert("Please Select Feature");
-        return false;
-    }
-    if (FileCount>1000)
-    {
-        alert("File count should be less than 1000...");
-        return false;
-    }
-    if (FileCount<=0)
-    {
-        alert("File Count should not be zero and Blank... ");
-        return false;
-    }
 
-//    location.reload();
-//    queryString = "runFET?id1=1&c1="+filetype+"&c2="+SelectedFeature+"&c3="+FileCount+"&c4=default"+"&c5="+datetime;
+    //Validation For All Tools
+
+    location.reload();
+    queryString = "runFET?id1=1&c1="+filetype+"&c2="+SelectedFeature+"&c3="+FileCount+"&c4=default"+"&c5="+datetime;
     //location.reload();
      alert("Wait.....Downloading Test data...");
-//    location.href='jenkins1';
-//    location.href=queryString;
+    location.href='jenkins1';
+    location.href=queryString;
 //Write("callperl.php", queryString);
-    return true;
 }
 
 
