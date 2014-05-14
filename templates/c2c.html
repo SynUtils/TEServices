@@ -1,0 +1,177 @@
+{% load static %}
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" dir="ltr"
+	lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>Files Download</title>
+<script src="{% static "js/file_download.js" %}" type="text/javascript"></script>
+<script src="{% static "js/ajax.js" %}" type="text/javascript"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="{% static "js/bootstrap.js" %}" type="text/javascript"></script>
+<script src="{% static "js/jquery.js" %}" type="text/javascript"></script>
+
+<link rel="stylsheet" type="text/css" href="{% static "css/default.css" %}" >
+<link rel="stylsheet" type="text/css" href="{% static "css/bootstrap.css" %}" >
+<link rel="stylsheet" type="text/css" href="{% static "css/bootstrap-responsive.css" %}" >
+
+<style type="text/css">
+.header {
+	font-family: sans-serif;
+	text-align: center;
+	font-size: 1.5em;
+	padding-top: 50px;
+}
+
+.tableValue {
+	text-align: left;
+	height: 30px;
+}
+
+.tableData {
+	text-align: right;
+	height: 30px;
+}
+
+.btn-large {
+	height: 30px;
+    width: 80px;
+    text-align: center;
+}
+
+.contentDivLoading {
+	opacity: 0.5;
+	z-index: -2;
+}
+
+.contentDivRestore {
+	opacity: 1;
+	z-index: 0;
+}
+
+.loadingDiv {
+	z-index: 2;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	position: absolute;
+}
+.mandatory{
+	color: red;
+}
+</style>
+</head>
+<body>
+
+
+	<div id="contentDiv">
+		
+		<div class="header">
+			C2C Automation Tool
+		</div>
+
+		<form name="ajax" method="POST" action="/c2c/TEServices"
+			enctype="multipart/form-data" id="f1" onsubmit="return submitForm();">
+			{% csrf_token %} <input type='hidden' name='csrfmiddlewaretoken'
+				value='randomchars' />
+			<table align="center">
+				<tr>
+
+					<td class="tableData">File Type: <span class="mandatory"> *</span></td>
+					<td class="tableValue"><select name="combo1" id="comb1" onchange="change(this);">
+							<option value="0">-Select-</option>
+							<option value="1">doc</option>
+							<option value="2">docx</option>
+							<option value="3">xls</option>
+							<option value="4">xlsx</option>
+							<option value="5">ppt</option>
+							<option value="6">pptx</option>
+					</select></td>
+				</tr>
+				<tr>
+					<td class="tableData">Feature: <span class="mandatory"> *</span></td>
+					<td class="tableValue"><select name="combo2" id="comb2"></select></td>
+				</tr>
+
+
+				<tr>
+					<td class="tableData">File Count: <span class="mandatory"> *</span></td>
+					<td class="tableValue"><input type="text" id="filecnt" name="fileCount"
+						onkeypress="return isNumberKey(event)"></td>
+				</tr>
+				<tr>
+					<td class="tableData">Email Address: <span class="mandatory"> *</span></td>
+					<td class="tableValue">
+						<input type="email" name="exampleInputEmail1"
+							class="form-control" id="exampleInputEmail1"
+							placeholder="Enter email" />
+					</td>
+					<div class="form-group"></div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="tableData">Base-line Build: <span class="mandatory"> *</span></td>
+					<td class="tableValue"><div class="control-group">{{ form.docfile}}</div></td>
+					
+				</tr>
+
+
+				<tr>
+					<td class="tableData">Compare Build: <span class="mandatory"> *</span></td>
+					<td class="tableValue"><div class="control-group">{{ form.compare_build}}</div></td>
+
+				</tr>
+
+				
+				<tr style="display:none">
+		 				<td colspan="2" class="header"><div class="btn-group">
+		 				<input type="submit" class="btn" 
+							onClick="" hidden="hidden" id="uploadcrx"></div></td>
+						<td > <input name="show_output" value = 'True'> </td> 
+				</tr>
+				
+				<tr>
+					<td colspan="2" style="text-align:center">
+						<input type="submit" name="subtn" id="btnsbt"
+							value="RUN C2C" class="btn-large"></td>
+				</tr>
+
+				</p>
+			</table>
+				<!--displaying views.py data-->
+				{% if cmd %} {{ cmd }} {% endif %} {% if command %} {{ command}}
+				<p>Running python script baby....wait...</p>
+				{% endif %} {% csrf_token %}
+				<p>{{ form.non_field_errors }}</p>
+				<p>{{ form.docfile.label_tag }} {{ form.docfile.help_text }}</p>
+				<p>{{ form.docfile.errors }} {{ form.docfile.help_text}} {{form.docfile.max_length }}</p>
+
+
+				<p>{{ form.non_field_errors }}</p>
+				<p>{{ form.compare_build.label_tag }} {{form.compare_build.help_text }}</p>
+				<p>{{ form.compare_build.errors }} {{form.compare_build.help_text}} {{ form.compare_build.max_length }}</p>
+
+				<p>
+
+			<br>
+	
+			</fieldset>
+			<div id="outputText">
+	        {% if show_output %}
+			Your C2C build is triggered successfully, Once you receive completion
+			mail please visit <a href=http://172.24.212.35/media/documents/{{output}}> output folder</a> for results.
+	        {% endif %}  
+			</div>
+
+		</FORM>
+
+	</div>
+	<div style="display: none" id="loadingImage">
+		<img src="{% static "img/ajax_spinner.gif" %}" style="top: 50%; left: 50%; position: absolute;"></img>
+	</div>
+</body>
+</html>
