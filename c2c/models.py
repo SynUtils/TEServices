@@ -10,3 +10,7 @@ class Document(models.Model):
     date_dir = date_time[:4] +"/"+ date_time[4:6] +"/"+ date_time[6:8] +'/'
     docfile = models.FileField(upload_to='documents/' + date_dir + date_time + '/baseBuild', max_length=5234,blank=True, null=True,)
     compare_build = models.FileField(upload_to='documents/' + date_dir + date_time + '/compareBuild', max_length=5234,blank=True, null=True,)
+
+class E2E_model(models.Model):
+    date_dir = date_time[:4] +"/"+ date_time[4:6] +"/"+ date_time[6:8] +'/'
+    e2e_file = models.FileField(upload_to='documents/' + date_dir + date_time + '/e2eBuild', max_length=5234,blank=True, null=True,)

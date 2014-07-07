@@ -36,7 +36,7 @@ class Properties:
                 if line in ['\n', '\r\n']:
                     continue
                 key, value = line.strip().split(self.sep)
-                self._props[key] = value
+                self._props[key.strip()] = value.strip()
         
         return self._props
     

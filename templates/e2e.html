@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<title>Run e2e</title>
+<!-- <link rel="stylsheet" type="text/css" href="{% static "css/automation.css" %}" >
+ -->
+
+<style type="text/css">
+.header {
+	font-family: sans-serif;
+	text-align: center;
+	font-size: 1.5em;
+	padding-top: 50px;
+}
+
+.tableValue {
+	text-align: left;
+	height: 30px;
+}
+
+.tableData {
+	text-align: right;
+	height: 30px;
+}
+
+.btn-large {
+	height: 30px;
+    width: 80px;
+    text-align: center;
+}
+
+.contentDivLoading {
+	opacity: 0.5;
+	z-index: -2;
+}
+
+.contentDivRestore {
+	opacity: 1;
+	z-index: 0;
+}
+
+.loadingDiv {
+	z-index: 2;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	position: absolute;
+}
+.mandatory{
+	color: red;
+}
+</style> 
+</head>
+<body>
+	<div class="header">E2E Automation Tool</div>
+	<form name="e2e" method="POST" action="/c2c/e2e" enctype="multipart/form-data">
+		<table align="center">
+			<tr>
+				<td class="tableData">Email Address: <span class="mandatory">
+						*</span></td>
+				<td class="tableValue"><input type="email"
+					name="e2eEmail" class="form-control"
+					id="e2eEmail" placeholder="Enter email" /></td>
+				<div class="form-group"></div>
+				</td>
+			</tr>
+			<tr>
+				<td class="tableData">Build: <span class="mandatory">
+						*</span></td>
+				<td class="tableValue"><div class="control-group">{{form.e2e_file}}</div></td>
+			<tr>
+				<td colspan="2" style="text-align: center">
+				<input type="submit" name="subtn" id="btnsbt" value="RUN E2E" class="btn-large"></td>
+			</tr>
+		</table>
+		{% csrf_token %}
+		<p>{{ form.non_field_errors }}</p>
+		<p>{{ form.e2e_file.label_tag }} {{ form.e2e_file.help_text }}</p>
+		<p>{{ form.e2e_file.errors }} {{ form.e2e_file.help_text}} {{form.e2e_file.max_length }}</p>
+	</form>
+</body>

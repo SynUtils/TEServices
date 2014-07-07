@@ -5,7 +5,9 @@ from django.template import RequestContext
 import subprocess
 import requests
 from syn_util import properties
-import c2c.models 
+import c2c.models
+from TEServices.forms import e2eForm 
+from c2c.models import E2E_model
 
 p = properties.Properties(r'/home/synerzip/Documents/TEServices/config/TEServices.properties')
 # p = properties.Properties(r'config/TEServices.properties')
@@ -103,3 +105,15 @@ def TEServices(request):
     {'documents':documents, 'form':form,'output':OUTPUT_DIR, 'show_output': show_output },
     context_instance = RequestContext(request)
     )
+
+def e2e(request):
+    if request.method == 'POST': 
+        if request.FILES.has_key('e2e_file'):
+             print "e2e file is present"
+             new_file = E2E_model(e2e_file = request.FILES['e2e_file'])
+             new_file.save()
+             e2e_build = new_file.e2e_file.file 
+             subprocess.check_output(['scp', e2e_build, r'synerzip@172.24.212.101:/tmp/'])
+             print 'e2e build: ', new_file.e2e_file.file
+    form = e2eForm(request.POST, request.FILES)  
+    return render_to_response('e2e.html', {'form': form}, context_instance = RequestContext(request))
