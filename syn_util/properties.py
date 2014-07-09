@@ -47,6 +47,10 @@ class Properties:
     """
         for key, value in self._props.items():
             print(str(key) + print_sep + '   ' + str(value))
+    
+    def get(self, key):
+        """ Return value for given property key """ 
+        return(self._props.get(key))
                 
            
 
