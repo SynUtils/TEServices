@@ -162,10 +162,18 @@ var validateForm = function() {
    var fileCount = document.getElementById('filecnt').value;
    var emailID = document.getElementById('exampleInputEmail1').value;
 //    checkrandom = document.getElementsByName('random');
+   var testData = document.getElementById("id_test_data").value;
    var baseBuild = document.getElementById("id_docfile").value;
    var compareBuild = document.getElementById("id_compare_build").value;
    
-   if (fileType != 0 && 
+   if(ownTestFiles.checked == true &&
+		   emailID != "" &&
+		   testData != "" &&
+		   baseBuild != "" &&
+		   compareBuild != "" ){
+	   return true;	   
+   }
+   else if (fileType != 0 && 
 		   selectedFeature != "" && 
 		   fileCount != "" && 
 		   emailID != "" &&
@@ -177,32 +185,36 @@ var validateForm = function() {
 		   alert("file count must be between 1 and 1000.")
 		   return false;
 	   }
+	   document.getElementById("id_test_data").value = "";
 	   return true;
    }
    else{
-   		   alert("You are requested to fill all fields !");	
+   		   alert("Please fill all fields!");	
 	 	   return false;
 
-	   }
-   
+	   }   
 };
 
 function submitForm()
 {
 	if (validateForm() == true){
-		var currentdate = new Date();
-		var datetime = "" + currentdate.getDate() + ""+ (currentdate.getMonth()+1)+ ""+ currentdate.getFullYear() + ""+ currentdate.getHours() +""+ currentdate.getMinutes() + "" + currentdate.getSeconds();
-		showLoadingImage()
-		location.reload();
-		location.href='TEServices';
-//		document.getElementById("outputText").innerHTML = "Your C2C build is triggered successfully, Once you receive completion mail please visit " +
-//				"<a href=http://172.24.212.35/media/documents/{{output}}> output folder </a> for results."
+		showLoadingImage();
 	}
 	else{
 		return false;
 	}
 }
 
+function toggleFET(own)
+{	
+	if(own.checked) {
+		$('.fet').hide()
+		$('.testData').show()
+	} else {
+		$('.fet').show()
+		$('.testData').hide()
+	}
+}
 
 
 
