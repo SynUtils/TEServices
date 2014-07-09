@@ -65,8 +65,6 @@
 </style>
 </head>
 <body>
-
-
 	<div id="contentDiv">
 		
 		<div class="header">
@@ -78,8 +76,12 @@
 			{% csrf_token %} <input type='hidden' name='csrfmiddlewaretoken'
 				value='randomchars' />
 			<table align="center">
-				<tr>
-
+			    <tr>
+                    <td class="tableData"> <input type="checkbox" name="ownTestFiles" id="ownTestFiles" onclick="toggleFET(this)"> </td>
+                    <td class="tableValue">Want to upload your own  data</select></td>
+                </tr>
+	           
+				<tr class="fet">                    
 					<td class="tableData">File Type: <span class="mandatory"> *</span></td>
 					<td class="tableValue"><select name="combo1" id="comb1" onchange="change(this);">
 							<option value="0">-Select-</option>
@@ -91,13 +93,11 @@
 							<option value="6">pptx</option>
 					</select></td>
 				</tr>
-				<tr>
+				<tr class="fet">
 					<td class="tableData">Feature: <span class="mandatory"> *</span></td>
 					<td class="tableValue"><select name="combo2" id="comb2"></select></td>
 				</tr>
-
-
-				<tr>
+				<tr class="fet">
 					<td class="tableData">File Count: <span class="mandatory"> *</span></td>
 					<td class="tableValue"><input type="text" id="filecnt" name="fileCount"
 						onkeypress="return isNumberKey(event)"></td>
@@ -112,11 +112,15 @@
 					<div class="form-group"></div>
 					</td>
 				</tr>
+				<tr class="testData" style="display:none">
+                    <td class="tableData" >Test Data: <span class="mandatory"> *</span></td>
+                    <td class="tableValue"><div class="control-group">{{ form.test_data}}</div></td>
+                    
+                </tr>
 
 				<tr>
 					<td class="tableData">Base-line Build: <span class="mandatory"> *</span></td>
-					<td class="tableValue"><div class="control-group">{{ form.docfile}}</div></td>
-					
+					<td class="tableValue"><div class="control-group">{{ form.docfile}}</div></td>					
 				</tr>
 
 
@@ -156,7 +160,6 @@
 				<p>{{ form.compare_build.errors }} {{form.compare_build.help_text}} {{ form.compare_build.max_length }}</p>
 
 				<p>
-
 			<br>
 	
 			</fieldset>
